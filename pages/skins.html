@@ -1,8 +1,9 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>ValoWiki</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <title>ValoWiki - Skins</title>
+    <link rel="stylesheet" href="/ValoWiki/styles/style.css">
 </head>
 <body>
     <header>
@@ -10,7 +11,7 @@
         <!-- Include the NavBar -->
         <div id="navbar"></div>
         <script>
-            fetch('components/NavBar.html')
+            fetch('/ValoWiki/components/NavBar.html')
                 .then(response => response.text())
                 .then(data => {
                     document.getElementById('navbar').innerHTML = data;
@@ -18,14 +19,13 @@
         </script>
     </header>
 
-    <main id="agents">
-        <section id="agents">
-            <h2>Agents</h2>
-            <p>Here there are all the agents af the game with a style of character select like the game.</p>
-        </section>
-    </main>
+    <div id="skins">
+        <h2>Skins</h2>
+        <p>Here are all the skins available in the game.</p>
+    </div>
 
     <footer>
         <p>&copy; 2025 ValoWiki. Todos los derechos reservados.</p>
     </footer>
 </body>
+</html>
