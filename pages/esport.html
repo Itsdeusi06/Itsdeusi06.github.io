@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>ValoWiki</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to ValoWiki</h1>
+        <!-- Include the NavBar -->
+        <div id="navbar"></div>
+        <script>
+            fetch('../components/NavBar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('navbar').innerHTML = data;
+                });
+        </script>
+    </header>
+
+    <main id="esport">
+        <section id="esport">
+            <h2>Esports</h2>
+            <p>Here you can find all the information about the esports scene of Valorant.</p>
+            <p>From tournaments to teams, we cover it all!</p>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 ValoWiki. Todos los derechos reservados.</p>
+    </footer>
+</body>
