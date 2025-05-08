@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>ValoWiki</title>
@@ -10,20 +11,32 @@
         <!-- Include the NavBar -->
         <div id="navbar"></div>
         <script>
-            fetch('../components/NavBar.html')
+            // Dynamically determine the base path
+            const basePath = window.location.pathname.includes('/ValoWiki/') ? '/ValoWiki/' : '/';
+            
+            // Fetch the NavBar.html file using the base path
+            fetch(`${basePath}components/NavBar.html`)
                 .then(response => response.text())
                 .then(data => {
                     document.getElementById('navbar').innerHTML = data;
+
+                    // Adjust links inside the NavBar to include the base path
+                    document.querySelectorAll('#navbar a').forEach(link => {
+                        if (link.getAttribute('href').startsWith('./') || link.getAttribute('href').startsWith('../')) {
+                            link.setAttribute('href', `${basePath}${link.getAttribute('href')}`);
+                        }
+                    });
                 });
         </script>
     </header>
 
     <div id="agents">
         <h2>Agents</h2>
-        <p>Here there are all the agents af the game with a style of character select like the game.</p>
+        <p>Here there are all the agents of the game with a style of character select like the game.</p>
     </div>
 
     <footer>
         <p>&copy; 2025 ValoWiki. Todos los derechos reservados.</p>
     </footer>
 </body>
+</html>
