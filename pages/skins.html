@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <title>ValoWiki</title>
-    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
     <header>
@@ -10,7 +10,7 @@
         <!-- Include the NavBar -->
         <div id="navbar"></div>
         <script>
-            fetch('../components/NavBar.html')
+            fetch('components/NavBar.html')
                 .then(response => response.text())
                 .then(data => {
                     document.getElementById('navbar').innerHTML = data;
