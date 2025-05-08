@@ -1,8 +1,10 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>ValoWiki</title>
-    <link rel="stylesheet" href="../styles/style.css">
+    <!-- Explicit path for the stylesheet -->
+    <link rel="stylesheet" href="/ValoWiki/styles/style.css">
 </head>
 <body>
     <header>
@@ -10,7 +12,8 @@
         <!-- Include the NavBar -->
         <div id="navbar"></div>
         <script>
-            fetch('../components/NavBar.html')
+            // Explicitly fetch the NavBar.html file from the correct path
+            fetch('/ValoWiki/components/NavBar.html')
                 .then(response => response.text())
                 .then(data => {
                     document.getElementById('navbar').innerHTML = data;
@@ -18,13 +21,14 @@
         </script>
     </header>
 
-        <div id="esport">
-            <h2>Esports</h2>
-            <p>Here you can find all the information about the esports scene of Valorant.</p>
-            <p>From tournaments to teams, we cover it all!</p>
-        </div>
+    <div id="esport">
+        <h2>Esports</h2>
+        <p>Here you can find all the information about the esports scene of Valorant.</p>
+        <p>From tournaments to teams, we cover it all!</p>
+    </div>
 
     <footer>
         <p>&copy; 2025 ValoWiki. Todos los derechos reservados.</p>
     </footer>
 </body>
+</html>
