@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <title>ValoWiki - Skins</title>
     <link rel="stylesheet" href="/ValoWiki/styles/style.css">
+    <!-- 
+    Check the html with the validator of https://search.google.com/test/rich-results
+    VP is not a currency, but it is used in the game Valorant for in-game purchases.
+    The price is in VP (Valorant Points) and the currency is set to VP. (probably not the best way to do it, so need to be cahnged)
+    The schema is a ProductCollection with a list of products (skins).
+      -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -16,8 +22,8 @@
             {
                 "@type": "Product",
                 "name": "Melee: Arcane Gauntlets",
-                "image": "https://itsdeusi06.github.io/ValoWiki/ValoWiki/SkinsContent/Arcane/knife.png",
-                "description": "A pair of gauntlets inspired by the Arcane series. ", 
+                "image": "https://itsdeusi06.github.io/ValoWiki/SkinsContent/Arcane/knife.png",
+                "description": "A pair of gauntlets inspired by the Arcane series.",
                 "brand": {
                     "@type": "Brand",
                     "name": "Valorant Skins"
@@ -25,8 +31,8 @@
                 "offers": {
                     "@type": "Offer",
                     "priceCurrency": "VP",
-                    "price": "4350",
-                },
+                    "price": "4350"
+                }
             },
             {
                 "@type": "Product",
@@ -40,7 +46,7 @@
                 "offers": {
                     "@type": "Offer",
                     "priceCurrency": "VP",
-                    "price": "2175",
+                    "price": "2175"
                 }
             }
         ]
