@@ -1,0 +1,30 @@
+
+/* Table agents */
+.agent-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 120px);
+    gap: 10px;
+  }
+  .agent {
+    
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    transition: border-color 0.2s;
+  }
+  .agent:hover {
+    border-color: #ff4655;
+  }
+  .info-panel {
+    margin-left: 40px;
+    padding: 20px;
+    
+    width: 300px;
+    border-radius: 8px;
+  }
+  .info-panel h2 {
+    margin-top: 0;
+    color: #ff4655;
+  }
