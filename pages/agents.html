@@ -6,7 +6,31 @@
     <link rel="stylesheet" href="/ValoWiki/styles/style.css">
     <link rel="stylesheet" href="../styles/agentsStyle.css">
     <link rel="stylesheet" href="../components/Scrips/agentsScript.js">
-    
+     <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@graph": [
+            {
+              "@type": "Person",
+              "name": "Brimstone",
+              "url": "https://itsdeusi06.github.io/ValoWiki/agents/brimstone",
+              "description": "A tactical commander with powerful smokes.",
+              "image": "https://itsdeusi06.github.io/ValoWiki/AgentsContent/Controller/Brimstone/PFP.webp",
+              "characterClass": "Controller",
+              "sameAs": "https://playvalorant.com/en-us/agents/brimstone/"
+            },
+            {
+              "@type": "Person",
+              "name": "Viper",
+              "url": "https://itsdeusi06.github.io/ValoWiki/agents/viper",
+              "description": "A deadly chemist wielding poisonous gas.",
+              "image": "https://itsdeusi06.github.io/ValoWiki/AgentsContent/Controller/Viper/PFP.webp",
+              "characterClass": "Controller",
+              "sameAs": "https://playvalorant.com/en-us/agents/viper/"
+            }
+            ]
+        }
+     </script>
 </head>
 <body>
     <header>
@@ -31,7 +55,7 @@
             <div class="agent" onclick="showInfo('Jett')">Jett</div>
             <div class="agent" onclick="showInfo('Sova')">Sova</div>
             <div class="agent" onclick="showInfo('Sage')">Sage</div>
-            <div class="agent" onclick="showInfo('Brimstone')">Brimstone</div>
+            <div class="agent" onclick="showInfo('Brimstone')"><img src="/ValoWiki/AgentsContent/Controller/Brimstone/PFP.webp" alt="Brimstone"></div>
         </div>
 
         <div class="info-panel" id="infoPanel">
@@ -39,30 +63,7 @@
             <p>Click on an agent to see their details.</p>
         </div>
         
-        <script>
-            const agents = {
-              'Jett': {
-                role: 'Duelist',
-                ability: 'Dash (Tailwind)',
-                description: 'Jett is fast and agile. Perfect for flanking and escaping quickly.'
-              },
-              'Sova': {
-                role: 'Initiator',
-                ability: 'Recon Bolt',
-                description: 'Sova locates and tracks enemies using his recon abilities.'
-              },
-              'Sage': {
-                role: 'Sentinel',
-                ability: 'Barrier Orb',
-                description: 'Sage supports her team with healing and powerful wall control.'
-              },
-              'Brimstone': {
-                role: 'Controller',
-                ability: 'Sky Smoke',
-                description: 'Brimstone controls space with precision smoke deployments.'
-              }
-            };
-        
+        <script>       
             function showInfo(name) {
               const agent = agents[name];
               const panel = document.getElementById('infoPanel');
