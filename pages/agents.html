@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="/ValoWiki/styles/style.css">
     <link rel="stylesheet" href="../styles/agentsStyle.css">
     <link rel="stylesheet" href="../components/Scrips/agentsScript.js">
-     <script type="application/ld+json">
+    <script type="application/ld+json">
         {
             "@context": "https://schema.org",
             "@graph": [
@@ -30,7 +30,44 @@
             }
             ]
         }
-     </script>
+    
+        
+    </script>
+    <script>       
+        const agents = {
+            'Jett': {
+            role: 'Duelist',
+            ability: 'Dash (Tailwind)',
+            description: 'Jett is fast and agile. Perfect for flanking and escaping quickly.'
+            },
+            'Sova': {
+            role: 'Initiator',
+            ability: 'Recon Bolt',
+            description: 'Sova locates and tracks enemies using his recon abilities.'
+            },
+            'Sage': {
+            role: 'Sentinel',
+            ability: 'Barrier Orb',
+            description: 'Sage supports her team with healing and powerful wall control.'
+            },
+            'Brimstone': {
+            role: 'Controller',
+            ability: 'Sky Smoke',
+            description: 'Brimstone controls space with precision smoke deployments.'
+            }
+        };
+
+        function showInfo(name) {
+            const agent = agents[name];
+            const panel = document.getElementById('infoPanel');
+            panel.innerHTML = `
+            <h2>${name}</h2>
+            <p><strong>Role:</strong> ${agent.role}</p>
+            <p><strong>Signature Ability:</strong> ${agent.ability}</p>
+            <p>${agent.description}</p>
+            `;
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -52,10 +89,18 @@
         <h2>Llista d'agents de Valorant</h2>
 
         <div class="agent-grid">
-            <div class="agent" onclick="showInfo('Jett')">Jett</div>
-            <div class="agent" onclick="showInfo('Sova')">Sova</div>
-            <div class="agent" onclick="showInfo('Sage')">Sage</div>
-            <div class="agent" onclick="showInfo('Brimstone')"><img src="/ValoWiki/AgentsContent/Controller/Brimstone/PFP.webp" alt="Brimstone"></div>
+            <button class="agent" onclick="showInfo('Jett')">
+                <img src="../AgentsContent/Duelist/Jett/PFP.webp" alt="Jett">
+            </button>
+            <button class="agent" onclick="showInfo('Sova')">
+                <img src="../AgentsContent/Iniciator/Sova/PFP.webp" alt="Sova">
+            </button>
+            <button class="agent" onclick="showInfo('Sage')">
+                <img src="../AgentsContent/Sentinel/Sage/PFP.webp" alt="Sage">
+            </button>
+            <button class="agent" onclick="showInfo('Brimstone')">
+                <img src="../AgentsContent/Controller/Brimstone/PFP.webp" alt="Brimstone">
+            </button>
         </div>
 
         <div class="info-panel" id="infoPanel">

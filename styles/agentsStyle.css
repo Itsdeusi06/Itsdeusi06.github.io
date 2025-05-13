@@ -1,8 +1,9 @@
 /* Table agents */
 .agent-grid {
     display: grid;
-    grid-template-columns: repeat(2, 120px);
+    grid-template-columns: repeat(4, 120px);
     gap: 10px;
+    height: 120px;
   }
   .agent {
     padding: 10px;
@@ -12,7 +13,7 @@
     border-radius: 8px;
     transition: border-color 0.2s;
   }
-  img {
+  .agent img {
     width: 100px;
     height: 100px;
     margin-bottom: 10px;
