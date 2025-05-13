@@ -33,26 +33,49 @@ body, html {
   .centered-text {
     position: fixed;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -95%) scale(10);
+    left: 65%;
+    transform: translate(-50%, -50%) scale(1);
     z-index: 2;
     color: white;
     font-size: 5rem;
     opacity: 0;
-    transition: transform 0.2s ease-out, opacity 0.2s ease-out;
+    transition: opacity 0.4s ease-out;
     pointer-events: none;
     font-family: 'Orbitron', sans-serif;
-  }
   
+    /* Right-to-left fade effect */
+    -webkit-mask-image: linear-gradient(to Right-to-left, transparent, white 10%, white);
+    mask-image: linear-gradient(to Right-to-left, transparent, white 10%, white);
+    -webkit-mask-size: 200% 100%;
+    mask-size: 200% 100%;
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+  }
+
   .riot-font, .pipe, .valorant {
     margin: 0 0.25em;
   }
   
-  
+  #home {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+ 
   /* Main content */
   #home {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
     padding: 3rem;
     background-color: #F12B15;
+  }
+
+  #home.visible {
+    opacity: 1;
+    transform: translateY(0);
   }
   
   footer {

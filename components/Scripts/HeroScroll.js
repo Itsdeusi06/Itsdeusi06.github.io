@@ -3,15 +3,17 @@ window.addEventListener('scroll', () => {
   const maxScroll = 2000;
   const progress = Math.min(scrollY / maxScroll, 1);
 
-  // IMAGE: move from center to left and shrink
-  const imageScale = 1 - 0.5 * progress;        // From 1 → 0.5
-  const imageTranslateX = -90 * progress;       // Moves to left smoothly
+  // IMAGE animation
+  const imageScale = 1 - 0.5 * progress;
+  const imageTranslateX = -90 * progress;
 
-  const textScale = 10 - 9.9 * progress;        // From 10 → 0.1
+  // TEXT animation
   const textOpacity = progress;
+  const maskPosition = 100 - 100 * progress;
 
   const backgroundImage = document.querySelector('.background-layer img');
   const centeredText = document.querySelector('.centered-text');
+  const homeSection = document.querySelector('#home');
 
   if (backgroundImage) {
     backgroundImage.style.transform = `translateX(${imageTranslateX}%) scale(${imageScale})`;
@@ -19,6 +21,14 @@ window.addEventListener('scroll', () => {
 
   if (centeredText) {
     centeredText.style.opacity = textOpacity;
-    centeredText.style.transform = `translate(-50%, -95%) scale(${textScale})`;
+    centeredText.style.webkitMaskPosition = `${maskPosition}% 0`;
+    centeredText.style.maskPosition = `${maskPosition}% 0`;
+  }
+
+  // Reveal #home after scroll passes a certain point (e.g. 800px)
+  if (scrollY > 1500) {
+    homeSection.classList.add('visible');
+  } else {
+    homeSection.classList.remove('visible');
   }
 });
