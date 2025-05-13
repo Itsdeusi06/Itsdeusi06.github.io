@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>ValoWiki - Skins</title>
-    <link rel="stylesheet" href="/ValoWiki/styles/style.css">
-    <!-- 
-    Check the html with the validator of https://search.google.com/test/rich-results
-    VP is not a currency, but it is used in the game Valorant for in-game purchases.
-    The price is in VP (Valorant Points) and the currency is set to VP. (probably not the best way to do it, so need to be cahnged)
-    The schema is a ProductCollection with a list of products (skins).
-      -->
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+    <script defer src="../components/Scripts/SkinsNavbar.js"></script>
+    <script defer src="../components/Scripts/busqueda.js"></script>
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -53,13 +51,14 @@
     }
     </script>
 </head>
+
 <body>
     <header>
         <h1>Welcome to ValoWiki</h1>
         <!-- Include the NavBar -->
         <div id="navbar"></div>
         <script>
-            fetch('/ValoWiki/components/NavBar.html')
+            fetch('../components/NavBar.html')
                 .then(response => response.text())
                 .then(data => {
                     document.getElementById('navbar').innerHTML = data;
@@ -67,13 +66,35 @@
         </script>
     </header>
 
-    <div id="skins">
-        <h2>Skins</h2>
-        <p>Here are all the skins available in the game.</p>
+    <div class="w3-content" style="background-color: white; padding: 20px; border-radius: 10px;">
+        <img class="mySlides" src="../SkinsContent/img-bundel/Arcane/Arcane.png">
+        <img class="mySlides" src="../SkinsContent/img-bundel/Divergence/Divergence.png">
+        <img class="mySlides" src="../SkinsContent/img-bundel/Kuronami/Kuronami.png">
+
+        <div class="search-container">
+            <input type="text" id="skinSearch" onkeyup="filterSkins()" placeholder="Buscar pack de skins...">
+        </div>
+          
+        <div class="thumbnail-row">
+            <div class="thumbnail-container">
+                <img class="demo w3-opacity w3-hover-opacity-off" src="../SkinsContent/img-bundel/Arcane/Arcane.png"
+                    onclick="currentDiv(1)">
+                <p class="caption">Arcane</p>
+            </div>
+            <div class="thumbnail-container">
+                <img class="demo w3-opacity w3-hover-opacity-off" src="../SkinsContent/img-bundel/Divergence/Divergence.png" onclick="currentDiv(2)">
+                <p class="caption">Divergence</p>
+            </div>
+            <div class="thumbnail-container">
+                <img class="demo w3-opacity w3-hover-opacity-off" src="../SkinsContent/img-bundel/Kuronami/Kuronami.png" onclick="currentDiv(3)">
+                <p class="caption">Kuronami</p>
+            </div>
+        </div>
     </div>
 
     <footer>
         <p>&copy; 2025 ValoWiki. Todos los derechos reservados.</p>
     </footer>
 </body>
+
 </html>
