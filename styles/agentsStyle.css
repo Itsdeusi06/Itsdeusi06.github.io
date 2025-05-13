@@ -1,33 +1,35 @@
 /* Table agents */
 .agent-grid {
     display: grid;
-    grid-template-columns: repeat(4, 120px);
+    grid-template-columns: repeat(4, 89px);
     gap: 10px;
-    height: 120px;
+    height: 100px;
   }
   .agent {
-    padding: 10px;
+
     text-align: center;
     cursor: pointer;
     border: 2px solid transparent;
-    border-radius: 8px;
     transition: border-color 0.2s;
   }
   .agent img {
-    width: 100px;
-    height: 100px;
-    margin-bottom: 10px;
+    width: 80px;
+    height: 80px;
   }
   .agent:hover {
     border-color: #ff4655;
   }
   .info-panel {
-    margin-left: 40px;
-    padding: 20px;
-    width: 300px;
+    position: absolute;
+    right: 0;
+    transform: translateY(-65%);
+    padding: 50px;
+    width: 400px;
     border-radius: 8px;
-  }
+}
+
+
   .info-panel h2 {
     margin-top: 0;
-    color: #ff4655;
+    color: #e2dd8e;
   }

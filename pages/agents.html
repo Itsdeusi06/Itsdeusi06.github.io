@@ -35,22 +35,22 @@
     </script>
     <script>       
         const agents = {
-            'Jett': {
+            'JETT': {
             role: 'Duelist',
             ability: 'Dash (Tailwind)',
             description: 'Jett is fast and agile. Perfect for flanking and escaping quickly.'
             },
-            'Sova': {
+            'SOVA': {
             role: 'Initiator',
             ability: 'Recon Bolt',
             description: 'Sova locates and tracks enemies using his recon abilities.'
             },
-            'Sage': {
+            'SAGE': {
             role: 'Sentinel',
             ability: 'Barrier Orb',
             description: 'Sage supports her team with healing and powerful wall control.'
             },
-            'Brimstone': {
+            'BRIMSTONE': {
             role: 'Controller',
             ability: 'Sky Smoke',
             description: 'Brimstone controls space with precision smoke deployments.'
@@ -89,17 +89,38 @@
         <h2>Llista d'agents de Valorant</h2>
 
         <div class="agent-grid">
-            <button class="agent" onclick="showInfo('Jett')">
-                <img src="../AgentsContent/Duelist/Jett/PFP.webp" alt="Jett">
+            <button class="agent" onclick="showInfo('JETT')">
+                <img src="../AgentsContent/Duelist/Jett/PFP.webp" alt="JETT">
             </button>
-            <button class="agent" onclick="showInfo('Sova')">
-                <img src="../AgentsContent/Iniciator/Sova/PFP.webp" alt="Sova">
+            <button class="agent" onclick="showInfo('SOVA')">
+                <img src="../AgentsContent/Iniciator/Sova/PFP.webp" alt="SOVA">
             </button>
-            <button class="agent" onclick="showInfo('Sage')">
-                <img src="../AgentsContent/Sentinel/Sage/PFP.webp" alt="Sage">
+            <button class="agent" onclick="showInfo('SAGE')">
+                <img src="../AgentsContent/Sentinel/Sage/PFP.webp" alt="SAGE">
             </button>
-            <button class="agent" onclick="showInfo('Brimstone')">
-                <img src="../AgentsContent/Controller/Brimstone/PFP.webp" alt="Brimstone">
+            <button class="agent" onclick="showInfo('BRIMSTONE')">
+                <img src="../AgentsContent/Controller/Brimstone/PFP.webp" alt="BRIMSTONE">
+            </button>
+            <button class="agent" onclick="showInfo('RAZE')">
+                <img src="../AgentsContent/Duelist/Raze/PFP.webp" alt="RAZE">
+            </button>
+            <button class="agent" onclick="showInfo('TEJO')">
+                <img src="../AgentsContent/Iniciator/Tejo/PFP.webp" alt="TEJO">
+            </button>
+            <button class="agent" onclick="showInfo('CHAMBER')">
+                <img src="../AgentsContent/Sentinel/Chamber/PFP.webp" alt="CHAMBER">
+            </button>
+            <button class="agent" onclick="showInfo('ASTRA')">
+                <img src="../AgentsContent/Controller/Astra/PFP.webp" alt="ASTRA">
+            </button>
+            <button class="agent" onclick="showInfo('OMEN')">
+                <img src="../AgentsContent/Controller/Omen/PFP.webp" alt="OMEN">
+            </button>
+            <button class="agent" onclick="showInfo('KAYO')">
+                <img src="../AgentsContent/Iniciator/Kayo/PFP.webp" alt="KAYO">
+            </button>
+            <button class="agent" onclick="showInfo('VYSE')">
+                <img src="../AgentsContent/Sentinel/Vyse/PFP.webp" alt="VYSE">
             </button>
         </div>
 
@@ -108,18 +129,7 @@
             <p>Click on an agent to see their details.</p>
         </div>
         
-        <script>       
-            function showInfo(name) {
-              const agent = agents[name];
-              const panel = document.getElementById('infoPanel');
-              panel.innerHTML = `
-                <h2>${name}</h2>
-                <p><strong>Role:</strong> ${agent.role}</p>
-                <p><strong>Signature Ability:</strong> ${agent.ability}</p>
-                <p>${agent.description}</p>
-              `;
-            }
-        </script>
+        
 
     </div>
 
