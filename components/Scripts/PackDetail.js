@@ -3,28 +3,61 @@ const packsData = {
         weapons: [
             {
                 name: "Arcane Vandal",
-                img: "../SkinsContent/Arcane/Vandal.png",
-                variants: [
-                    "../SkinsContent/Arcane/Vandal_variant1.png",
-                    "../SkinsContent/Arcane/Vandal_variant2.png"
-                ]
+                img: "../SkinsContent/Arcane/vandal.png",
+                variants: []
             },
             {
                 name: "Arcane Knife",
                 img: "../SkinsContent/Arcane/knife.png",
-                variants: [
-                    "../SkinsContent/Arcane/knife_variant1.png"
-                ]
+                variants: []
             }
         ]
     },
     Divergence: {
         weapons: [
             {
-                name: "Divergence Phantom",
-                img: "../SkinsContent/Divergence/Phantom.png",
+                name: "Divergence Vandal",
+                img: "../SkinsContent/Divergence/vandal.png",
                 variants: [
-                    "../SkinsContent/Divergence/Phantom_variant1.png"
+                    "../SkinsContent/Divergence/Variants1/vandal.png",
+                    "../SkinsContent/Divergence/Variants2/vandal.png",
+                    "../SkinsContent/Divergence/Variants3/vandal.png"
+                ]
+            },
+            {
+                name: "Divergence Operator",
+                img: "../SkinsContent/Divergence/operator.png",
+                variants: [
+                    "../SkinsContent/Divergence/Variants1/operator.png",
+                    "../SkinsContent/Divergence/Variants2/operator.png",
+                    "../SkinsContent/Divergence/Variants3/operator.png"
+                ]
+            },
+            {
+                name: "Divergence Knife",
+                img: "../SkinsContent/Divergence/knife.png",
+                variants: [
+                    "../SkinsContent/Divergence/Variants1/knife.png",
+                    "../SkinsContent/Divergence/Variants2/knife.png",
+                    "../SkinsContent/Divergence/Variants3/knife.png"
+                ]
+            },
+            {
+                name: "Divergence Judge",
+                img: "../SkinsContent/Divergence/judge.png",
+                variants: [
+                    "../SkinsContent/Divergence/Variants1/judge.png",
+                    "../SkinsContent/Divergence/Variants2/judge.png",
+                    "../SkinsContent/Divergence/Variants3/judge.png"
+                ]
+            },
+            {
+                name: "Divergence Classic",
+                img: "../SkinsContent/Divergence/classic.png",
+                variants: [
+                    "../SkinsContent/Divergence/Variants1/classic.png",
+                    "../SkinsContent/Divergence/Variants2/classic.png",
+                    "../SkinsContent/Divergence/Variants3/classic.png"
                 ]
             }
         ]
@@ -33,8 +66,10 @@ const packsData = {
         weapons: [
             {
                 name: "Kuronami Spectre",
-                img: "../SkinsContent/Kuronami/Spectre.png",
-                variants: []
+                img: "../SkinsContent/Kuronami/spectre.png",
+                variants: [
+                    "../SkinsContent/Kuronami/Variants1/spectre.png"
+                ]
             }
         ]
     }
