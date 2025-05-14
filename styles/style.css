@@ -3,13 +3,18 @@
   padding: 0; 
   box-sizing: border-box; 
 }
+
 html, body { 
   width: 100%; 
   height: 100%; 
   overflow-x: hidden; 
-  background: rgb(255, 70, 85); 
   color: #fff; 
   font-family: sans-serif; 
+}
+
+/* This is where background color starts and is animated later */
+body {
+  background-color: rgb(255, 70, 85);
 }
 
 /* content div to enable scroll */
@@ -22,7 +27,6 @@ html, body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  /* allow overflow so text can extend outside the 300px box */
   width: 300px;
   height: 300px;
   overflow: visible;
@@ -41,7 +45,7 @@ html, body {
   width: max-content;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); /* Center both horizontally and vertically */
+  transform: translate(-50%, -50%);
   white-space: nowrap;
   text-align: center;
   font-size: 2.5rem;
@@ -60,7 +64,11 @@ html, body {
   position: absolute;
   top: 100%;
   left: 50%;
-  transform: translateX(-40%);
-  font-size: 2rem;
+  transform: translateX(-50%);
+  font-size: 1.2rem;
+  max-width: 90vw;
+  width: max-content;
+  text-align: center;
+  line-height: 1.4;
   opacity: 0;
 }

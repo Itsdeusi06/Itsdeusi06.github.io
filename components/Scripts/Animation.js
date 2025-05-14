@@ -9,24 +9,18 @@ window.addEventListener('DOMContentLoaded', () => {
   const text = container.textContent.split('');
   container.textContent = ''; // Clear the <p> before adding spans
 
-  console.log('Initial text:', container.textContent); // <- should be non-empty
-
   // Create spans for each character
   text.forEach(char => {
     const span = document.createElement('span');
-    if (char === ' ') {
-      span.innerHTML = '&nbsp;';
-    } else {
-      span.textContent = char;
-    }
+    span.innerHTML = char === ' ' ? '&nbsp;' : char;
     container.appendChild(span);
   });
 
   // Step 1: Move & scale fist
   tl.fromTo('#riot-fist',
-  { xPercent: 0, scale: 1, transformOrigin: 'center center' },
-  { xPercent: -150, scale: 0.6, duration: 1.5, ease: 'power2.inOut' }
-);
+    { xPercent: 0, scale: 1, transformOrigin: 'center center' },
+    { xPercent: -150, scale: 0.6, duration: 1.5, ease: 'power2.inOut' }
+  );
 
   // Step 2: Text fade-in reverse
   tl.to('#text-overlay span', {
@@ -54,7 +48,20 @@ window.addEventListener('DOMContentLoaded', () => {
     animation: tl,
     start: 'top top',
     end: '+=4000', // Increase scroll distance for smoother progress
-    scrub: 1.5,    // Smooth out the animation (seconds of catch-up)
-    pin: true      // Optional: pins the section during animation
+    scrub: 1.5,
+    pin: true
   });
+
+  // Background color animation (starts after initial animation)
+  gsap.to("body", {
+    backgroundColor: "#000",
+    ease: "none",
+    scrollTrigger: {
+      trigger: "#final-text",
+      start: "top+=1500 top",   // start fade after 1000px scroll
+      end: "top+=2000 top",     // end fade at 4000px scroll
+      scrub: 1.5
+    }
+  });
+
 });
