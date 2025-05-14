@@ -1,45 +1,37 @@
+// Funció per generar automàticament les dades de cada pack
+function generatePackData(packName, weapons, numVariants) {
+    const basePath = `../../SkinsContent/${packName}`;
+    return {
+        weapons: weapons.map(weapon => {
+            const variants = [];
+            for (let i = 1; i <= numVariants; i++) {
+                variants.push(`${basePath}/Variants${i}/${weapon}.png`);
+            }
+            return {
+                name: `${packName} ${capitalize(weapon)}`,
+                img: `${basePath}/${weapon}.png`,
+                variants: variants
+            };
+        })
+    };
+}
+
+// Capitalitza el nom de l'arma per mostrar-ho bonic
+function capitalize(text) {
+    return text.charAt(0).toUpperCase() + text.slice(1);
+}
+
+// Dades automàtiques de cada pack (afegeix més aquí si vols)
 const packsData = {
-    Arcane: {
-        weapons: [
-            {
-                name: "Arcane Vandal",
-                img: "../SkinsContent/Arcane/Vandal.png",
-                variants: [
-                    "../SkinsContent/Arcane/Vandal_variant1.png",
-                    "../SkinsContent/Arcane/Vandal_variant2.png"
-                ]
-            },
-            {
-                name: "Arcane Knife",
-                img: "../SkinsContent/Arcane/knife.png",
-                variants: [
-                    "../SkinsContent/Arcane/knife_variant1.png"
-                ]
-            }
-        ]
-    },
-    Divergence: {
-        weapons: [
-            {
-                name: "Divergence Phantom",
-                img: "../SkinsContent/Divergence/Phantom.png",
-                variants: [
-                    "../SkinsContent/Divergence/Phantom_variant1.png"
-                ]
-            }
-        ]
-    },
-    Kuronami: {
-        weapons: [
-            {
-                name: "Kuronami Spectre",
-                img: "../SkinsContent/Kuronami/Spectre.png",
-                variants: []
-            }
-        ]
-    }
+    Arcane: generatePackData("Arcane", ["vandal", "knife"], 2),
+    Divergence: generatePackData("Divergence", ["classic", "judge", "knife", "operator", "vandal"], 3),
+    Kuronami: generatePackData("Kuronami", ["spectre"], 0),
+    Glitchpop: generatePackData("Glitchpop", ["frenzy", "bulldog", "judge", "odin", "axe", "dagger", "classic", "phantom", "vandal", "operator"], 3),
+    Singularity: generatePackData("Singularity", ["sheriff", "spectre", "phantom", "ares", "knife"], 3),
+    // Afegeix més packs aquí si cal
 };
 
+// Mostra els detalls d’un pack seleccionat
 function showPackDetail(packName) {
     const pack = packsData[packName];
     if (!pack) return;
@@ -64,6 +56,7 @@ function showPackDetail(packName) {
     document.getElementById('packDetail').style.display = 'block';
 }
 
+// Mostra les variants quan es clica una arma
 function showVariants(variants) {
     const variantGallery = document.querySelector('.variant-gallery');
     variantGallery.innerHTML = '';
@@ -76,11 +69,28 @@ function showVariants(variants) {
     });
 }
 
+// Clica en el thumbnail d’un pack per carregar-lo
 document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('.thumbnail-container').forEach(container => {
+    const row = document.getElementById('thumbnailRow');
+    Object.keys(packsData).forEach((packName, index) => {
+        const container = document.createElement('div');
+        container.className = 'thumbnail-container';
+
+        const img = document.createElement('img');
+        img.className = 'demo w3-opacity w3-hover-opacity-off';
+        img.src = `../SkinsContent/${packName}/${packName}.png`;
+        img.onclick = () => currentDiv(index + 1); // només si uses la funció de slides
+        container.appendChild(img);
+
+        const caption = document.createElement('p');
+        caption.className = 'caption';
+        caption.textContent = packName;
+        container.appendChild(caption);
+
         container.addEventListener('click', () => {
-            const packName = container.querySelector('.caption').textContent.trim();
             showPackDetail(packName);
         });
+
+        row.appendChild(container);
     });
 });

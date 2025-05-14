@@ -78,21 +78,7 @@
             <input type="text" id="skinSearch" onkeyup="filterSkins()" placeholder="Buscar pack de skins...">
         </div>
           
-        <div class="thumbnail-row">
-            <div class="thumbnail-container">
-                <img class="demo w3-opacity w3-hover-opacity-off" src="../SkinsContent/Arcane/Arcane.png"
-                    onclick="currentDiv(1)">
-                <p class="caption">Arcane</p>
-            </div>
-            <div class="thumbnail-container">
-                <img class="demo w3-opacity w3-hover-opacity-off" src="../SkinsContent/Divergence/Divergence.png" onclick="currentDiv(2)">
-                <p class="caption">Divergence</p>
-            </div>
-            <div class="thumbnail-container">
-                <img class="demo w3-opacity w3-hover-opacity-off" src="../SkinsContent/Kuronami/Kuronami.png" onclick="currentDiv(3)">
-                <p class="caption">Kuronami</p>
-            </div>
-        </div>
+        <div class="thumbnail-row" id="thumbnailRow"></div>
 
                 <!-- Zona de detalle del pack seleccionado -->
         <div id="packDetail" class="pack-detail" style="display: none;">
