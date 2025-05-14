@@ -17,11 +17,6 @@ body {
   background-color: rgb(255, 70, 85);
 }
 
-/* content div to enable scroll */
-#content { 
-  width: 100%; 
-}
-
 #animation-wrapper {
   position: fixed;
   top: 50%;
@@ -62,7 +57,7 @@ body {
 
 #final-text {
   position: absolute;
-  top: 100%;
+  top: 170%;
   left: 50%;
   transform: translateX(-50%);
   font-size: 1.2rem;
@@ -72,3 +67,61 @@ body {
   line-height: 1.4;
   opacity: 0;
 }
+
+#content {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* centra verticalmente */
+  align-items: center;     /* centra horizontalmente */
+  top: 10%;
+  left: 10%;
+}
+
+.three-panel-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 90%;
+  gap: 2rem;
+  padding: 0 1rem;
+  margin-bottom: 5%;
+}
+
+.panel-row {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.panel {
+  flex: 1 1 30%;
+  min-width: 280px;
+  height: 300px;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: background 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+
+.panel:hover {
+  background: rgb(255, 70, 85);
+  box-shadow: 0 4px 24px 0 rgba(0,0,0,0.15);
+}
+
+.main-panel {
+  min-width: 400px;
+  max-width: 100%;
+  flex: none;
+}
+
+
