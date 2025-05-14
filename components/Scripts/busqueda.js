@@ -8,7 +8,7 @@ function filterSkins() {
       const text = caption.textContent || caption.innerText;
   
       if (text.toLowerCase().includes(filter)) {
-        containers[i].style.display = "";
+        containers[i].style.display = "flex"; // <- Aquí el cambio
       } else {
         containers[i].style.display = "none";
       }

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
     <script defer src="../components/Scripts/SkinsNavbar.js"></script>
     <script defer src="../components/Scripts/busqueda.js"></script>
+    <script defer src="../components/Scripts/PackDetail.js"></script>
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -90,7 +91,24 @@
                 <p class="caption">Kuronami</p>
             </div>
         </div>
+
+                <!-- Zona de detalle del pack seleccionado -->
+        <div id="packDetail" class="pack-detail" style="display: none;">
+            <h2 id="packTitle">Arcane</h2>
+
+            <!-- Armas del pack -->
+            <div class="weapons-gallery">
+                <!-- Se llenará dinámicamente con imágenes de armas -->
+            </div>
+
+            <!-- Variantes de la arma seleccionada -->
+            <div class="variant-gallery">
+                <!-- Se llenará dinámicamente con variantes -->
+            </div>
+        </div>
+
     </div>
+
 
     <footer>
         <p>&copy; 2025 ValoWiki. Todos los derechos reservados.</p>
