@@ -1,5 +1,17 @@
 // Wait for DOM + GSAP to load
 window.addEventListener('DOMContentLoaded', () => {
+  if (window.innerWidth <= 750) {
+    // Show text immediately, no animation
+    const container = document.getElementById('text-overlay');
+    container.style.opacity = 1;
+    // Optionally, show all spans or just set textContent again
+    container.innerHTML = 'Riot Games | Valorant';
+    // Hide animation elements if needed
+    document.getElementById('riot-fist').style.display = 'none';
+    document.getElementById('final-text').style.display = 'none';
+    return;
+  }
+
   // Register ScrollTrigger plugin
   gsap.registerPlugin(ScrollTrigger);
 
@@ -19,7 +31,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // Step 1: Move & scale fist
   tl.fromTo('#riot-fist',
     { xPercent: 0, scale: 1, transformOrigin: 'center center' },
-    { xPercent: -150, scale: 0.6, duration: 1.5, ease: 'power2.inOut' }
+    { xPercent: -50, scale: 0.6, duration: 1.5, ease: 'power2.inOut' }
   );
 
   // Step 2: Text fade-in reverse
@@ -39,7 +51,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Step 4: Reveal final text
   tl.fromTo('#final-text',
-    { opacity: 0, y: 20 },
+    { opacity: 0, y:  0 },
     { opacity: 1, y: 0, duration: 1 }
   );
 
