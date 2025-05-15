@@ -23,11 +23,10 @@ function capitalize(text) {
 
 // Dades automàtiques de cada pack (afegeix més aquí si vols)
 const packsData = {
-    Arcane: generatePackData("Arcane", ["vandal", "knife"], 2),
+    Arcane: generatePackData("Arcane", ["vandal", "knife"], 0),
     Divergence: generatePackData("Divergence", ["classic", "judge", "knife", "operator", "vandal"], 3),
-    Kuronami: generatePackData("Kuronami", ["spectre"], 0),
+    Kuronami: generatePackData("Kuronami", ["spectre","vandal","marshal","sheriff","knife",], 3),
     Glitchpop: generatePackData("Glitchpop", ["frenzy", "bulldog", "judge", "odin", "axe", "dagger", "classic", "phantom", "vandal", "operator"], 3),
-    Singularity: generatePackData("Singularity", ["sheriff", "spectre", "phantom", "ares", "knife"], 3),
     // Afegeix més packs aquí si cal
 };
 
