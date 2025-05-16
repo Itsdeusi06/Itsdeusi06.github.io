@@ -81,20 +81,30 @@
         <div class="thumbnail-row" id="thumbnailRow"></div>
 
                 <!-- Zona de detalle del pack seleccionado -->
-        <div id="packDetail" class="pack-detail" style="display: none;">
+        <div id="packDetail" class="pack-detail">
             <h2 id="packTitle">Arcane</h2>
+            <!-- Variantes debajo del título -->
+            <div class="variant-gallery" id="variantGallery"></div>
 
-            <!-- Armas del pack -->
-            <div class="weapons-gallery">
-                <!-- Se llenará dinámicamente con imágenes de armas -->
+            <div class="pack-columns">
+                <!-- Armas a la izquierda -->
+                <div class="weapons-column">
+                    <div class="weapons-gallery" id="weaponsGallery"></div>
+                </div>
+
+                <!-- Preview al centro -->
+                <div class="central-column">
+                    <div id="weaponPreview" class="weapon-preview">
+                        <p>Selecciona una variante para ver el video o imagen</p>
+                    </div>
+                </div>
+
+                <!-- Info del arma a la derecha -->
+                <div class="weapon-info">
+                    <h3 id="weaponInfoTitle">Información del arma</h3>
+                    <div id="weaponInfoDetails">Precio, tipo, rareza, etc...</div>
+                </div>
             </div>
-
-            <!-- Variantes de la arma seleccionada -->
-            <div class="variant-gallery">
-                <!-- Se llenará dinámicamente con variantes -->
-            </div>
-        </div>
-
     </div>
 </body>
 

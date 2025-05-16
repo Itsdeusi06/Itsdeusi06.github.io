@@ -48,7 +48,10 @@ function showPackDetail(packName) {
         img.style.width = '150px';
         img.style.margin = '10px';
         img.style.cursor = 'pointer';
-        img.onclick = () => showVariants(weapon.variants);
+        img.onclick = () => {
+            showVariants(weapon.variants);
+            showWeaponInfo(weapon.name, packName); // ← para la info del arma
+        };
         weaponsGallery.appendChild(img);
     });
 
@@ -62,11 +65,32 @@ function showVariants(variants) {
     variants.forEach(variant => {
         const img = document.createElement('img');
         img.src = variant;
-        img.style.width = '100px';
-        img.style.margin = '5px';
+        img.style.cursor = 'pointer';
+        img.onclick = () => showWeaponPreview(variant);
         variantGallery.appendChild(img);
     });
 }
+
+function showWeaponPreview(variantUrl) {
+    const preview = document.getElementById('weaponPreview');
+    preview.innerHTML = `<img src="${variantUrl}" style="max-height: 100%; max-width: 100%;">`;
+}
+
+function showWeaponInfo(weaponName, packName) {
+    document.getElementById('weaponInfoTitle').textContent = weaponName;
+    document.getElementById('weaponInfoDetails').innerHTML = `
+        <p>Pack: ${packName}</p>
+        <p>Precio: ${getWeaponPrice(weaponName)} VP</p>
+        <p>Rareza: Exclusiva</p>
+    `;
+}
+
+// Simula precios por ejemplo
+function getWeaponPrice(name) {
+    if (name.toLowerCase().includes('knife')) return 4350;
+    return 2175;
+}
+
 
 // Clica en el thumbnail d’un pack per carregar-lo
 document.addEventListener('DOMContentLoaded', () => {
