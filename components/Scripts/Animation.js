@@ -1,18 +1,41 @@
 // Wait for DOM + GSAP to load
 window.addEventListener('DOMContentLoaded', () => {
-   // Responsive values for animation
-   let xPercent = -50;
-   let scale = 0.6;
- 
-   if (window.matchMedia('(min-width: 2000px)').matches) {
-     xPercent = -55; scale = 0.7;
-   } else if (window.matchMedia('(min-width: 1440px) and (max-width: 1999px)').matches) {
-     xPercent = -60; scale = 0.65;
-   } else if (window.matchMedia('(min-width: 1000px) and (max-width: 1439px)').matches) {
-     xPercent = -80; scale = 0.6;
-   } else {
-     return;
-   }z
+  // Responsive values for animation
+  let xPercent;
+  let yPercent;
+  let scale;
+  let top;
+  let left;
+
+  if (window.matchMedia('(min-width: 2486px)').matches) {
+    xPercent = -50;
+    scale = 0.6;
+    top = 5;
+  } else if (window.matchMedia('(min-width: 2000px and (max-width: 2485))').matches) {
+    xPercent = -50;
+    yPercent = 0;
+    scale = 0.6;
+    top = 50;
+    left = 25; 
+  } else if (window.matchMedia('(min-width: 1440px) and (max-width: 1999px)').matches) {
+    xPercent = -60;
+    scale = 0.7;
+  } else if (window.matchMedia('(min-width: 1000px) and (max-width: 1439px)').matches) {
+    xPercent = 0;
+    yPercent = -20;
+    scale = 0.8;
+  } else if (window.matchMedia('(min-width: 760px) and (max-width: 999px)')) {
+    xPercent = 0;
+    yPercent = -20;
+    top = 30;
+    left = 25;
+  } else if (window.matchMedia('(min-width: 360px) and (max-width: 759px)')) {
+    xPercent = 0;
+    yPercent = -0;
+    top = 60;
+    left = 10;
+  }
+
   // Set HTML base font size for rem scaling
   const baseFontSize = 16;
   const html = document.documentElement;
@@ -21,6 +44,8 @@ window.addEventListener('DOMContentLoaded', () => {
   // Auto-resize and center the riot-fist image responsively
   const resizeFist = () => {
     const fist = document.getElementById('riot-fist');
+    if (!fist) return;
+
     const vw = window.innerWidth;
     const vh = window.innerHeight;
 
@@ -34,23 +59,15 @@ window.addEventListener('DOMContentLoaded', () => {
     // Resize and center the image
     fist.style.width = `${imgWidth}px`;
     fist.style.maxWidth = '90vw';
-    fist.style.left = '25%';
-    fist.style.top = '50%';
+    fist.style.position = 'absolute'; // Ensure position is set
+    fist.style.left = `${left}%`;
+    fist.style.top = `${top}%`;
     fist.style.transform = 'translate(-50%, -50%)';
   };
 
+  // Call once on load and on resize
   resizeFist();
   window.addEventListener('resize', resizeFist);
-
-  // Mobile fallback: show static text and hide animation
-  if (window.innerWidth <= 750) {
-    const container = document.getElementById('text-overlay');
-    container.style.opacity = 1;
-    container.innerHTML = 'Riot Games | Valorant';
-    document.getElementById('riot-fist').style.display = 'none';
-    document.getElementById('final-text').style.display = 'none';
-    return;
-  }
 
   gsap.registerPlugin(ScrollTrigger);
 
@@ -70,9 +87,10 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Step 1: Animate fist image
   tl.fromTo('#riot-fist',
-    { xPercent: 0, scale: 1, transformOrigin: 'center center' },
-    { xPercent, scale, duration: 1.5, ease: 'power2.inOut' }
+    { xPercent: 0, yPercent: 0, scale: 1, transformOrigin: 'center center' },
+    { xPercent, yPercent, scale, duration: 1.5, ease: 'power2.inOut' }
   );
+
 
   // Step 2: Animate text letters in reverse order
   tl.to('#text-overlay span', {

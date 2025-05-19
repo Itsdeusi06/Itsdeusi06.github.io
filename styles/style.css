@@ -123,3 +123,13 @@ body {
   max-width: 100%;
   flex: none;
 }
+
+@media screen and (max-width: 758px) {
+  #text-overlay {
+    font-size: 1rem;
+  }
+
+  .three-panel-layout {
+    margin-bottom: 100px;
+  }
+}
