@@ -11,7 +11,7 @@ window.addEventListener('DOMContentLoaded', () => {
     xPercent = -50;
     scale = 0.6;
     top = 5;
-  } else if (window.matchMedia('(min-width: 2000px and (max-width: 2485))').matches) {
+  } else if (window.matchMedia('(min-width: 2000px) and (max-width: 2485))').matches) {
     xPercent = -50;
     yPercent = 0;
     scale = 0.6;
@@ -29,15 +29,16 @@ window.addEventListener('DOMContentLoaded', () => {
     yPercent = -20;
     top = 30;
     left = 25;
-  } else if (window.matchMedia('(min-width: 360px) and (max-width: 759px)')) {
+  } else if (window.matchMedia('(min-width: 0px) and (max-width: 759px)')) {
     xPercent = 0;
     yPercent = -0;
-    top = 60;
-    left = 10;
+    scale = 0.8
+    top = 50;
+    left = 0;
   }
 
   // Set HTML base font size for rem scaling
-  const baseFontSize = 16;
+  const baseFontSize = 8;
   const html = document.documentElement;
   html.style.fontSize = `${baseFontSize}px`;
 

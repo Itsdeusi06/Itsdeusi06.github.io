@@ -124,12 +124,93 @@ body {
   flex: none;
 }
 
-@media screen and (max-width: 758px) {
+@media screen and (min-width: 2486px) { /* BIG SCREENS */
   #text-overlay {
-    font-size: 1rem;
+    font-size: 5rem;
   }
 
   .three-panel-layout {
-    margin-bottom: 100px;
+    gap: 50px;
+    margin-bottom: 10%;
   }
+
+  .panel {
+    font-size: 3rem;
+  }
+  
+  #final-text {
+    font-size: 3rem;
+   }
+}
+@media screen and (min-width: 1440px) and (max-width: 1999px) { /* NORMAL SCREENS */
+  #text-overlay {
+    font-size: 3rem;
+  }
+
+  .three-panel-layout {
+    gap: 75px;
+    margin-bottom: 15%;
+  }
+
+  .panel {
+    font-size: 2.5rem;
+  }
+  
+  #final-text {
+    font-size: 2.5rem;
+   }
+}
+@media screen and (min-width: 1000px) and (max-width: 1439px) { /* SMALL SCREENS */
+  #text-overlay {
+    font-size: 2.5rem;
+  }
+
+  .three-panel-layout {
+    gap: 100px;
+    margin-bottom: 20%;
+  }
+
+  .panel {
+    font-size: 2rem;
+  }
+  
+  #final-text {
+    font-size: 2rem;
+   }
+}
+@media screen and (min-width: 760px) and (max-width: 999px) { /* TABLETS SCREENS */
+  #text-overlay {
+    font-size: 2.25rem;
+  }
+
+  .three-panel-layout {
+    gap: 125px;
+    margin-bottom: 23%;
+  }
+
+  .panel {
+    font-size: 1.75rem;
+  }
+  
+  #final-text {
+    font-size: 1.75rem;
+   }
+}
+@media screen and (min-width: 0px) and (max-width: 759px) { /* MOBILE SCREENS (animation doesn't working properly) */
+  #text-overlay {
+    font-size: 2rem;
+  }
+
+  .three-panel-layout {
+    gap: 150px;
+    margin-bottom: 25%;
+  }
+
+  .panel {
+    font-size: 1.50rem;
+  }
+  
+  #final-text {
+    font-size: 1.50rem;
+   }
 }
