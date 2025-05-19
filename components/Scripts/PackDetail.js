@@ -5,7 +5,10 @@ function generatePackData(packName, weapons, numVariants) {
         weapons: weapons.map(weapon => {
             const variants = [];
             for (let i = 1; i <= numVariants; i++) {
-                variants.push(`${basePath}/Variants${i}/${weapon}.png`);
+                variants.push({
+                    thumb: `${basePath}/Variants${i}/${weapon}.png`,
+                    video: `${basePath}/Variants${i}/${weapon}.mp4`
+                });
             }
             return {
                 name: `${packName} ${capitalize(weapon)}`,
@@ -62,19 +65,28 @@ function showPackDetail(packName) {
 function showVariants(variants) {
     const variantGallery = document.querySelector('.variant-gallery');
     variantGallery.innerHTML = '';
+
     variants.forEach(variant => {
         const img = document.createElement('img');
-        img.src = variant;
+        img.src = variant.thumb;
+        img.alt = 'Variante';
         img.style.cursor = 'pointer';
-        img.onclick = () => showWeaponPreview(variant);
+        img.onclick = () => showWeaponPreview(variant.video);
         variantGallery.appendChild(img);
     });
 }
 
-function showWeaponPreview(variantUrl) {
+
+function showWeaponPreview(videoUrl) {
     const preview = document.getElementById('weaponPreview');
-    preview.innerHTML = `<img src="${variantUrl}" style="max-height: 100%; max-width: 100%;">`;
+    preview.innerHTML = `
+        <video autoplay loop muted playsinline controls style="width: 100%; height: 100%; border-radius: 10px; object-fit: contain;">
+            <source src="${videoUrl}" type="video/mp4">
+            Tu navegador no soporta el video.
+        </video>
+    `;
 }
+
 
 function showWeaponInfo(weaponName, packName) {
     document.getElementById('weaponInfoTitle').textContent = weaponName;
