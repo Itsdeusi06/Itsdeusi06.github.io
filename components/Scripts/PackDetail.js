@@ -1,15 +1,19 @@
 // Funció per generar automàticament les dades de cada pack
-function generatePackData(packName, weapons, numVariants) {
+function generatePackData(packName, weapons, numVariants, videoData = {}) {
     const basePath = `../../SkinsContent/${packName}`;
     return {
         weapons: weapons.map(weapon => {
             const variants = [];
+
             for (let i = 1; i <= numVariants; i++) {
+                const videoUrl = videoData[weapon]?.[`variant${i}`] || ""; // fallback to empty string if not found
+
                 variants.push({
                     thumb: `${basePath}/Variants${i}/${weapon}.png`,
-                    video: `${basePath}/Variants${i}/${weapon}.mp4`
+                    video: videoUrl
                 });
             }
+
             return {
                 name: `${packName} ${capitalize(weapon)}`,
                 img: `${basePath}/${weapon}.png`,
@@ -18,6 +22,7 @@ function generatePackData(packName, weapons, numVariants) {
         })
     };
 }
+
 
 // Capitalitza el nom de l'arma per mostrar-ho bonic
 function capitalize(text) {
@@ -32,6 +37,20 @@ const packsData = {
     Glitchpop: generatePackData("Glitchpop", ["frenzy", "bulldog", "judge", "odin", "axe", "dagger", "classic", "phantom", "vandal", "operator"], 3),
     // Afegeix més packs aquí si cal
 };
+
+const kuronamiVideos = {
+    vandal: {
+        variant1: "https://cdn.example.com/videos/kuronami/vandal-variant1.mp4",
+        variant2: "https://cdn.example.com/videos/kuronami/vandal-variant2.mp4",
+        variant3: "https://cdn.example.com/videos/kuronami/vandal-variant3.mp4"
+    },
+    knife: {
+        variant1: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/f478ae7c-427d-bf16-9b2f-268b209abefe_default_universal.mp4",
+        variant2: "https://cdn.example.com/videos/kuronami/knife-variant2.mp4",
+        variant3: "https://cdn.example.com/videos/kuronami/knife-variant3.mp4"
+    }
+};
+
 
 // Mostra els detalls d’un pack seleccionat
 function showPackDetail(packName) {
