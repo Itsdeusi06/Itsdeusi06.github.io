@@ -38,7 +38,34 @@
             'JETT': {
             role: 'Duelist',
             ability: 'Dash (Tailwind)',
-            description: 'Jett is fast and agile. Perfect for flanking and escaping quickly.'
+            description: 'Jett is fast and agile. Perfect for flanking and escaping quickly.',
+            abilities: [
+                {
+                    name: 'Cloudburst',
+                    img: '../AgentsContent/Duelist/Jett/1.avif',
+                    video: '../AgentsContent/Duelist/Jett/1.mp4'
+                },
+                {
+                    name: 'Updraft',
+                    img: '../AgentsContent/Duelist/Jett/2.avif',
+                    video: '../AgentsContent/Duelist/Jett/2.mp4'
+                },
+                {
+                    name: 'Tailwind',
+                    img: '../AgentsContent/Duelist/Jett/3.avif',
+                    video: '../AgentsContent/Duelist/Jett/3.mp4'
+                },
+                {
+                    name: 'Blade Storm',
+                    img: '../AgentsContent/Duelist/Jett/ult.avif',
+                    video: '../AgentsContent/Duelist/Jett/ult.mp4'
+                },
+                {
+                    name: 'Passive',
+                    img: '',
+                    video: ''
+                }
+            ]
             },
             'SOVA': {
             role: 'Initiator',
@@ -58,15 +85,35 @@
         };
 
         function showInfo(name) {
-            const agent = agents[name];
-            const panel = document.getElementById('infoPanel');
-            panel.innerHTML = `
+        const agent = agents[name];
+        const panel = document.getElementById('infoPanel');
+
+        const abilityButtonsHtml = agent.abilities.map((a, i) => `
+            <button class="ability-btn" onclick="showAbilityVideo('${a.video}', '${a.name}')">
+                <img src="${a.img}" alt="${a.name}">
+            </button>
+        `).join('');
+
+        panel.innerHTML = `
             <h2>${name}</h2>
             <p><strong>Role:</strong> ${agent.role}</p>
             <p><strong>Signature Ability:</strong> ${agent.ability}</p>
             <p>${agent.description}</p>
-            `;
-        }
+            <div class="abilities">${abilityButtonsHtml}</div>
+            <div id="videoContainer"></div>
+        `;
+    }
+
+    function showAbilityVideo(videoUrl, abilityName) {
+        const container = document.getElementById('videoContainer');
+        container.innerHTML = `
+            <h3>${abilityName}</h3>
+            <video width="360" controls autoplay>
+                <source src="${videoUrl}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        `;
+    }
     </script>
 </head>
 <body>
@@ -122,14 +169,60 @@
             <button class="agent" onclick="showInfo('VYSE')">
                 <img src="../AgentsContent/Sentinel/Vyse/PFP.webp" alt="VYSE">
             </button>
+            <button class="agent" onclick="showInfo('CLOVE')">
+                <img src="../AgentsContent/Controller/Clove/PFP.webp" alt="CLOVE">
+            </button>
+            <button class="agent" onclick="showInfo('ISO')">
+                <img src="../AgentsContent/Duelist/Iso/PFP.webp" alt="ISO">
+            </button>
+            <button class="agent" onclick="showInfo('BREACH')">
+                <img src="../AgentsContent/Iniciator/Breach/PFP.webp" alt="BREACH">
+            </button>
+            <button class="agent" onclick="showInfo('CYPHER')">
+                <img src="../AgentsContent/Sentinel/Cypher/PFP.webp" alt="CYPHER">
+            </button>
+            <button class="agent" onclick="showInfo('HARBOR')">
+                <img src="../AgentsContent/Controller/Harbor/PFP.webp" alt="HARBOR">
+            </button>
+            <button class="agent" onclick="showInfo('NEON')">
+                <img src="../AgentsContent/Duelist/Neon/PFP.webp" alt="NEON">
+            </button>
+            <button class="agent" onclick="showInfo('FADE')">
+                <img src="../AgentsContent/Iniciator/Fade/PFP.webp" alt="FADE">
+            </button>
+            <button class="agent" onclick="showInfo('DEADLOCK')">
+                <img src="../AgentsContent/Sentinel/Deadlock/PFP.webp" alt="DEADLOCK">
+            </button>
+            <button class="agent" onclick="showInfo('VIPER')">
+                <img src="../AgentsContent/Controller/Viper/PFP.webp" alt="VIPER">
+            </button>
+            <button class="agent" onclick="showInfo('PHOENIX')">
+                <img src="../AgentsContent/Duelist/Phoenix/PFP.webp" alt="PHOENIX">
+            </button>
+            <button class="agent" onclick="showInfo('GEKKO')">
+                <img src="../AgentsContent/Iniciator/Gekko/PFP.webp" alt="GEKKO">
+            </button>
+            <button class="agent" onclick="showInfo('KILLJOY')">
+                <img src="../AgentsContent/Sentinel/Killjoy/PFP.webp" alt="KILLJOY">
+            </button>
+            <button class="agent" onclick="showInfo('REYNA')">
+                <img src="../AgentsContent/Duelist/Reyna/PFP.webp" alt="REYNA">
+            </button>
+            <button class="agent" onclick="showInfo('WAYLAY')">
+                <img src="../AgentsContent/Duelist/Waylay/PFP.webp" alt="WAYLAY">
+            </button>
+            <button class="agent" onclick="showInfo('SKYE')">
+                <img src="../AgentsContent/Iniciator/Skye/PFP.webp" alt="SKYE">
+            </button>
+            <button class="agent" onclick="showInfo('YORU')">
+                <img src="../AgentsContent/Duelist/Yoru/PFP.webp" alt="YORU">
+            </button>
         </div>
 
         <div class="info-panel" id="infoPanel">
             <h2>Select an Agent</h2>
             <p>Click on an agent to see their details.</p>
         </div>
-        
-        
 
     </div>
 

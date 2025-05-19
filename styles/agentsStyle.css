@@ -1,35 +1,67 @@
 /* Table agents */
 .agent-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 89px);
-    gap: 10px;
-    height: 100px;
-  }
-  .agent {
-
-    text-align: center;
-    cursor: pointer;
-    border: 2px solid transparent;
-    transition: border-color 0.2s;
-  }
-  .agent img {
-    width: 80px;
-    height: 80px;
-  }
+  display: grid;
+  grid-template-columns: repeat(4, 89px);
+  gap: 10px;
+  height: 100px;
+}
+.agent {
+  text-align: center;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border-color 0.2s;
+}
+.agent img {
+  width: 80px;
+  height: 80px;
+}
   .agent:hover {
-    border-color: #ff4655;
+    border-color: cyan;
   }
-  .info-panel {
-    position: absolute;
-    right: 0;
-    transform: translateY(-65%);
-    padding: 50px;
-    width: 400px;
-    border-radius: 8px;
+.info-panel {
+  position: absolute;
+  top: 100px;
+  right: 0;
+  transform: translateY(0);
+  padding: 50px;
+  width: 400px;
+  border-radius: 8px;
 }
 
+.info-panel h2 {
+  margin-top: 0;
+  color: #e2dc87;
+}
 
-  .info-panel h2 {
-    margin-top: 0;
-    color: #e2dd8e;
-  }
+.abilities {
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.ability-btn {
+  width: 64px;
+  height: 64px;
+  background: none;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  padding: 0;
+  cursor: pointer;
+  transition: border-color 0.2s;
+  background-color: black;
+}
+
+.ability-btn:hover {
+  border-color: #e2dc87;
+}
+
+.ability-btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+#videoContainer {
+  margin-top: 20px;
+}
