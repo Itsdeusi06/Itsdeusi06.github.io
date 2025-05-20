@@ -2,33 +2,58 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>ValoWiki</title>
-    <!-- Explicit path for the stylesheet -->
-    <link rel="stylesheet" href="/ValoWiki/styles/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VCT Matches - Masters Toronto 2025</title>
+    <link rel="stylesheet" href="../styles/esports.css">
 </head>
 <body>
+    <div id="navbar"></div>
+
     <header>
-        <h1>Welcome to ValoWiki</h1>
-        <!-- Include the NavBar -->
-        <div id="navbar"></div>
-        <script>
-            // Explicitly fetch the NavBar.html file from the correct path
-            fetch('/ValoWiki/components/NavBar.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('navbar').innerHTML = data;
-                });
-        </script>
+
+        <h1>Valorant Champions Tour 2025: Masters Toronto</h1>
     </header>
 
-    <div id="esport">
-        <h2>Esports</h2>
-        <p>Here you can find all the information about the esports scene of Valorant.</p>
-        <p>From tournaments to teams, we cover it all!</p>
-    </div>
+    <main>
+        <div class="content-wrapper">
+            <!-- Left Half: Teams with logos and players -->
+            <div class="team-list">
+                <h2>Teams</h2>
+
+                <!-- Team List will be dynamically populated from the players script -->
+                <div id="team-list"></div>
+            </div>
+
+            <!-- Right Half: Match List -->
+            <div class="match-list">
+                <h2>Match Schedule</h2>
+                <!-- Match Cards will be generated dynamically by JavaScript -->
+            </div>
+        </div>
+    </main>
 
     <footer>
-        <p>&copy; 2025 ValoWiki. Todos los derechos reservados.</p>
+        <p>&copy; 2025 Valorant Fan Page</p>
     </footer>
+
+    <script>
+        // Explicitly fetch the NavBar.html file from the correct path
+        fetch('../components/NavBar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error loading NavBar:', error);
+            });
+    </script>
+    
+    <!-- Load players.js first -->
+    <script src="../components/scripts/players.js" defer></script>
+        
+    <!-- Load matches.js after players.js -->
+    <script src="../components/scripts/matches.js" defer></script>
+
+
 </body>
 </html>
