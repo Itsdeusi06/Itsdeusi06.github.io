@@ -108,3 +108,151 @@
   height: auto;
   border-radius: 8px;
 }
+
+/*
+
+Estil nous pero no actualitzar encara
+
+/* === AGENT GRID === 
+.agent-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 400px);
+  row-gap: 16px;
+  column-gap: 60px;
+  justify-content: left;
+  padding: 16px;
+}
+
+.agent {
+  text-align: center;
+  cursor: pointer;
+  border: 2px solid transparent;
+  width: 150px;
+  height: 150px;
+  border-radius: 12px;
+  padding: 4px;
+  transition: all 0.3s ease;
+  background: linear-gradient(145deg, #1f1f2e, #2a2a3d);
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.agent img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.agent:hover {
+  border-color: #00fff7;
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #00fff7;
+}
+
+/* === INFO PANEL === 
+.info-panel {
+  position: absolute;
+  top: 100px;
+  right: 0;
+  padding: 24px;
+  margin: 20px;
+  width: 100%;
+  max-width: 500px;
+  background: rgba(10, 10, 20, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: #fff;
+  box-shadow: 0 0 20px rgba(0,0,0,0.6);
+}
+
+/* === RESPONSIVE === 
+@media (max-width: 480px) {
+  .agent-grid {
+    grid-template-columns: repeat(1, 100px);
+  }
+}
+
+@media (max-width: 768px) {
+  .info-panel {
+    position: static;
+    width: 100%;
+    margin-top: 20px;
+  }
+  .agent-grid {
+    grid-template-columns: repeat(2, 100px);
+  }
+}
+
+@media (min-width: 1024px) {
+  .info-panel {
+    width: 25%;
+  }
+  .agent-grid {
+    grid-template-columns: repeat(3, 100px);
+  }
+}
+
+@media (min-width: 2048px) {
+  .agent-grid {
+    grid-template-columns: repeat(4, 100px);
+  }
+}
+
+/* === TEXT === 
+.info-panel h2 {
+  margin-top: 0;
+  font-weight: 700;
+  color: #00fff7;
+  text-transform: uppercase;
+}
+
+/* === ABILITIES === 
+.abilities {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  gap: 12px;
+}
+
+.ability-btn {
+  width: 64px;
+  height: 64px;
+  background: linear-gradient(135deg, #0f0f1a, #1e1e2f);
+  border: 2px solid #333;
+  border-radius: 10px;
+  padding: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ability-btn:hover {
+  border-color: #e2dc87;
+  box-shadow: 0 0 10px #e2dc87;
+}
+
+.ability-btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+}
+
+.ability-btn img:hover {
+  transform: scale(1.1);
+}
+
+/* === VIDEO CONTAINER === 
+#videoContainer video {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.7);
+}
+
+
+
+*/
