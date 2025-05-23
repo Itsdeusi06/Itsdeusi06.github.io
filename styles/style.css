@@ -14,9 +14,12 @@ html, body {
 
 /* This is where background color starts and is animated later */
 body {
-  background-color: #1e1e1e;
+  background-color: rgb(255, 70, 85);
 }
 
+#skins{
+  background-color: #1e1e1e;
+}
 #animation-wrapper {
   position: fixed;
   top: 50%;
@@ -293,7 +296,7 @@ text-align: center;
 
 #skinSearch {
   padding: 12px 20px;
-  margin: 10px;
+  margin:  20px;
   width: 80%;
   max-width: 600px; /* Aumenta el tamaño máximo */
   font-size: 16px;
