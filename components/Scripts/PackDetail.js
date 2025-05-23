@@ -160,8 +160,126 @@ const glitchpopImg = {
         variant3: "https://c-valorant-api.op.gg/Assets/WeaponSkins/68B30D4E-4743-F1BD-B90F-FBAA6005A215.png"
     }
 };
-
-  
+const resImg = {
+    ghost: {
+        base: "https://c-valorant-api.op.gg/Assets/WeaponSkins/04C7E366-4563-BE98-E870-66889E4F5DC4.png",
+        variant1: "https://c-valorant-api.op.gg/Assets/WeaponSkins/2D230B9A-4FA1-4FD7-6685-0EAA122D37F5.png",
+        variant2: "https://c-valorant-api.op.gg/Assets/WeaponSkins/B274C07D-45E7-F259-FC0A-EB9CAF72B66A.png"
+    },
+    bulldog: {
+        base: "https://c-valorant-api.op.gg/Assets/WeaponSkins/09787460-4968-BFE4-8AEA-1FB276A2F628.png",
+        variant1: "https://c-valorant-api.op.gg/Assets/WeaponSkins/D771E642-4A9D-865F-3234-ADBE20F7C63B.png",
+        variant2: "https://c-valorant-api.op.gg/Assets/WeaponSkins/A340C055-4156-C90D-36AD-F982F78C7DC3.png"
+    },
+    phantom: {
+        base: "https://c-valorant-api.op.gg/Assets/WeaponSkins/4F04A759-4406-9AB7-18B4-0A9044ECDD60.png",
+        variant1: "https://c-valorant-api.op.gg/Assets/WeaponSkins/A9AA0B3B-4F6B-52EB-CE5C-4FAE5EB240AB.png",
+        variant2: "https://c-valorant-api.op.gg/Assets/WeaponSkins/91E9BFBE-4DE0-03D1-D1EA-1D8FCEA4A7AB.png"
+    },
+    operator: {
+        base: "https://c-valorant-api.op.gg/Assets/WeaponSkins/F84ADD77-4DB2-4617-7575-5FBABD619B1A.png",
+        variant1: "https://c-valorant-api.op.gg/Assets/WeaponSkins/FB880B98-4A7C-EDB7-E4F3-B18BAD59AC44.png",
+        variant2: "https://c-valorant-api.op.gg/Assets/WeaponSkins/E80A6075-4999-8A05-E7FB-F0A4A3D14F6B.png"
+    },
+    knife: {
+        base: "https://c-valorant-api.op.gg/Assets/WeaponSkins/9EDFEC92-43C6-FD03-4456-64B816DB778C.png",
+        variant1: "https://c-valorant-api.op.gg/Assets/WeaponSkins/7B3948F7-44CD-EF60-747C-D09C2BBB502F.png",
+        variant2: "https://c-valorant-api.op.gg/Assets/WeaponSkins/868E42C3-4269-B75C-B249-AFA0DC8DEA15.png"
+    }
+};
+const evoriImg = {
+    ghost: {
+        base: "https://c-valorant-api.op.gg/Assets/WeaponSkins/3785DD7B-4C1E-7C69-9837-BCA7C9756376.png",
+        variant1: "https://c-valorant-api.op.gg/Assets/WeaponSkins/7D370CCE-4839-3CA5-8D95-4C9B350505E9.png",
+        variant2: "https://c-valorant-api.op.gg/Assets/WeaponSkins/66ECFD17-4A13-FB91-AD12-2DA8908D8991.png",
+        variant3: "https://c-valorant-api.op.gg/Assets/WeaponSkins/145ACE82-4E91-DF06-87F4-88A6D195B490.png"
+    },
+    spectre: {
+        base: "https://c-valorant-api.op.gg/Assets/WeaponSkins/AF0FDFEB-464E-C286-ED47-73AF602674FB.png",
+        variant1: "https://c-valorant-api.op.gg/Assets/WeaponSkins/C56F5F5A-4E67-D2C0-87F0-E4A677A04025.png",
+        variant2: "https://c-valorant-api.op.gg/Assets/WeaponSkins/3C827524-4679-F9D3-CEF2-E6812A919886.png",
+        variant3: "https://c-valorant-api.op.gg/Assets/WeaponSkins/0CCAB1FF-4092-4311-2538-5AA22B328FA4.png"
+    },
+    vandal: {
+        base: "https://c-valorant-api.op.gg/Assets/WeaponSkins/1BF0D77F-4E94-9DC0-7A7A-FB8430B569D3.png",
+        variant1: "https://c-valorant-api.op.gg/Assets/WeaponSkins/70A24C3D-421A-A7B8-56F5-D7AF607EA006.png",
+        variant2: "https://c-valorant-api.op.gg/Assets/WeaponSkins/2984C2A8-40E1-69EB-36B2-BEA3C6F9B82D.png",
+        variant3: "https://c-valorant-api.op.gg/Assets/WeaponSkins/5527958B-4F09-A20B-CBDA-8888EE29DD5C.png"
+    },
+    odin: {
+        base: "https://c-valorant-api.op.gg/Assets/WeaponSkins/6E1EF3FB-4197-87F8-ECFD-98809B0575EC.png",
+        variant1: "https://c-valorant-api.op.gg/Assets/WeaponSkins/11F0B0ED-4152-3A57-78CB-71A5765ADB6F.png",
+        variant2: "https://c-valorant-api.op.gg/Assets/WeaponSkins/F6581E76-4BE5-C878-04A9-688068B76DBB.png",
+        variant3: "https://c-valorant-api.op.gg/Assets/WeaponSkins/85BF962D-43F7-BCEE-E2DC-1AA388186B4D.png"
+    },
+    knife: {
+        base: "https://c-valorant-api.op.gg/Assets/WeaponSkins/BDA3227C-4B50-20EA-9552-72BDA27338EE.png",
+        variant1: "https://c-valorant-api.op.gg/Assets/WeaponSkins/97AF8A67-4F62-F5C1-2FF8-CEB6D6F732A9.png",
+        variant2: "https://c-valorant-api.op.gg/Assets/WeaponSkins/BE008F47-45D0-2EEC-ABAF-7FA5CE4A8AE6.png",
+        variant3: "https://c-valorant-api.op.gg/Assets/WeaponSkins/4B5FF95B-4A22-FB3D-7AFF-A881485DEB33.png"
+    }
+};
+const protocolImg = {
+    sheriff: {
+        base: "https://c-valorant-api.op.gg/Assets/WeaponSkins/DD1D4AD8-4672-2D69-6530-03BF7B308D58.png",
+        variant1: "https://c-valorant-api.op.gg/Assets/WeaponSkins/107A7283-41B4-B06C-8514-0A99C6F11D50.png",
+        variant2: "https://c-valorant-api.op.gg/Assets/WeaponSkins/2751A592-4E56-E9DC-020F-19A377851968.png",
+        variant3: "https://c-valorant-api.op.gg/Assets/WeaponSkins/16A29E72-4DD3-E463-7E37-0E8A584E5721.png"
+    },
+    spectre: {
+        base: "https://c-valorant-api.op.gg/Assets/WeaponSkins/52C1070E-4635-44FC-D1D0-6DA60C93BEA1.png",
+        variant1: "https://c-valorant-api.op.gg/Assets/WeaponSkins/5864760C-44BE-6AA4-C5A5-2FB742F45474.png",
+        variant2: "https://c-valorant-api.op.gg/Assets/WeaponSkins/BCBDC71F-4FCB-5B64-16FB-82AA9618C3D9.png",
+        variant3: "https://c-valorant-api.op.gg/Assets/WeaponSkins/3927B569-44CE-FA5C-74B9-4CB8B2DA2572.png"
+    },
+    bulldog: {
+        base: "https://c-valorant-api.op.gg/Assets/WeaponSkins/77B09A8E-45C4-47E2-449F-44BD6F3A2F7A.png",
+        variant1: "https://c-valorant-api.op.gg/Assets/WeaponSkins/44239053-4877-F129-9A52-2388E0F88989.png",
+        variant2: "https://c-valorant-api.op.gg/Assets/WeaponSkins/9FC743EB-46C8-E382-39E4-23B5AC835EFC.png",
+        variant3: "https://c-valorant-api.op.gg/Assets/WeaponSkins/57D458A2-4457-DAA3-C6AF-79BA6C9F6E5A.png"
+    },
+    phantom: {
+        base: "https://c-valorant-api.op.gg/Assets/WeaponSkins/89F9432F-4C8E-CEFE-73BD-26966C875647.png",
+        variant1: "https://c-valorant-api.op.gg/Assets/WeaponSkins/15008EBB-478D-5D5C-A5B7-3181583161F4.png",
+        variant2: "https://c-valorant-api.op.gg/Assets/WeaponSkins/4A8846E9-4051-2813-DB9F-7A8E274542A1.png",
+        variant3: "https://c-valorant-api.op.gg/Assets/WeaponSkins/5822D67C-47A4-015B-AE91-EAB163D5E4F5.png"
+    },
+    knife: {
+        base: "https://c-valorant-api.op.gg/Assets/WeaponSkins/555D0161-4ED0-45A8-C829-FEA356BC8F96.png",
+        variant1: "https://c-valorant-api.op.gg/Assets/WeaponSkins/B466B9EF-41D1-6597-B1B4-15B23A9A45C8.png",
+        variant2: "https://c-valorant-api.op.gg/Assets/WeaponSkins/0D09DC9B-4B96-E357-E05B-F6B2AE3D857B.png",
+        variant3: "https://c-valorant-api.op.gg/Assets/WeaponSkins/C1F3F20B-411F-8651-09D5-069069D92844.png"
+    }
+};
+const enderFlameImg = {
+    frenzy: {
+        base: "https://c-valorant-api.op.gg/Assets/WeaponSkins/EEE0C458-474A-B80F-871C-C188F3929A79.png",
+        variant1: "https://c-valorant-api.op.gg/Assets/WeaponSkins/F40759FA-4A3A-3BB1-484E-4FABF878A774.png",
+        variant2: "https://c-valorant-api.op.gg/Assets/WeaponSkins/A0E8D567-4673-2F0C-7BB0-DEBB86D3F4EF.png",
+        variant3: "https://c-valorant-api.op.gg/Assets/WeaponSkins/3F8B9999-4A92-DE0A-8A0A-4EBF04258950.png"
+    },
+    judge: {
+        base: "https://c-valorant-api.op.gg/Assets/WeaponSkins/72B9E3F7-427F-3D24-F618-11B0F28FEB89.png",
+        variant1: "https://c-valorant-api.op.gg/Assets/WeaponSkins/87E27487-4705-8060-5D07-C6A6DC927F09.png",
+        variant2: "https://c-valorant-api.op.gg/Assets/WeaponSkins/EDE643C7-4B83-0FD4-13D1-1C9DDB4D34CD.png",
+        variant3: "https://c-valorant-api.op.gg/Assets/WeaponSkins/EC9CAA7A-43FF-8F04-52A7-27A46DE24F6E.png"
+    },
+    vandal: {
+        base: "https://c-valorant-api.op.gg/Assets/WeaponSkins/835AD8E3-4B0E-071B-CE38-00A05032AC43.png",
+        variant1: "https://c-valorant-api.op.gg/Assets/WeaponSkins/A9873BD5-41F9-170D-27F0-ABB68FEA0CE9.png",
+        variant2: "https://c-valorant-api.op.gg/Assets/WeaponSkins/6FB459FA-4368-7D20-106A-629DB9825A2B.png",
+        variant3: "https://c-valorant-api.op.gg/Assets/WeaponSkins/403F7D3E-4E96-6566-42F3-01B7A803D660.png"
+    },
+    operator: {
+        base: "https://c-valorant-api.op.gg/Assets/WeaponSkins/61583C81-4332-FF81-2EDE-2A8248863C80.png",
+        variant1: "https://c-valorant-api.op.gg/Assets/WeaponSkins/A8B125E5-4E33-953D-D02C-37AD9E284B6A.png",
+        variant2: "https://c-valorant-api.op.gg/Assets/WeaponSkins/37CCA29B-4468-A01E-E31B-8F8978A81EEF.png",
+        variant3: "https://c-valorant-api.op.gg/Assets/WeaponSkins/296DCDDB-4FBF-8834-BC01-44ACAC66DC60.png"
+    },
+    knife: {
+        base: "https://c-valorant-api.op.gg/Assets/WeaponSkins/D74171BF-4F3A-7DD7-76B9-04AFEAEB72C0.png"
+    }
+};
 //videos
 const arcaneVideos = {
     vandal: {
@@ -289,12 +407,138 @@ const glitchpopVideos = {
         variant3:"https://valorant.dyn.riotcdn.net/x/videos/release-10.09/bed7b85c-4783-5891-2967-1e96f3b83a60_default_universal.mp4"
     }
 };
+
+const resVideo = {
+    ghost: {
+        base: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/dfa1ca2d-40af-46b5-d543-d09ed77a8312_default_universal.mp4",
+        variant1: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/dfa1ca2d-40af-46b5-d543-d09ed77a8312_default_universal.mp4",
+        variant2: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/dfa1ca2d-40af-46b5-d543-d09ed77a8312_default_universal.mp4"
+    },
+    bulldog: {
+        base: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/88d6deff-44f9-a259-227a-78a5a2253103_default_universal.mp4",
+        variant1: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/88d6deff-44f9-a259-227a-78a5a2253103_default_universal.mp4",
+        variant2: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/88d6deff-44f9-a259-227a-78a5a2253103_default_universal.mp4"
+    },
+    phantom: {
+        base: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/424ab4c1-4745-5ccf-0848-2caf41e2c1c4_default_universal.mp4",
+        variant1: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/424ab4c1-4745-5ccf-0848-2caf41e2c1c4_default_universal.mp4",
+        variant2: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/424ab4c1-4745-5ccf-0848-2caf41e2c1c4_default_universal.mp4"
+    },
+    operator: {
+        base: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/4dd1db22-47cf-0c93-ecb5-7e8c2e331dbc_default_universal.mp4",
+        variant1: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/4dd1db22-47cf-0c93-ecb5-7e8c2e331dbc_default_universal.mp4",
+        variant2: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/4dd1db22-47cf-0c93-ecb5-7e8c2e331dbc_default_universal.mp4"
+    },
+    knife: {
+        base: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/18b02317-42e8-ca20-3cdc-5fb7b837cf6c_default_universal.mp4",
+        variant1: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/18b02317-42e8-ca20-3cdc-5fb7b837cf6c_default_universal.mp4",
+        variant2: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/18b02317-42e8-ca20-3cdc-5fb7b837cf6c_default_universal.mp4"
+    }
+};
+const evoriVideo= {
+    ghost: {
+        base: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/155b1d2d-4a5f-94a9-7c2f-cd8aa72eb400_default_universal.mp4",
+        variant1: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/155b1d2d-4a5f-94a9-7c2f-cd8aa72eb400_default_universal.mp4",
+        variant2: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/155b1d2d-4a5f-94a9-7c2f-cd8aa72eb400_default_universal.mp4",
+        variant3: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/155b1d2d-4a5f-94a9-7c2f-cd8aa72eb400_default_universal.mp4"
+    },
+    spectre: {
+        base: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/a4403c44-4690-8531-d2bf-a6862e83dc5b_default_universal.mp4",
+        variant1: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/a4403c44-4690-8531-d2bf-a6862e83dc5b_default_universal.mp4",
+        variant2: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/a4403c44-4690-8531-d2bf-a6862e83dc5b_default_universal.mp4",
+        variant3: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/a4403c44-4690-8531-d2bf-a6862e83dc5b_default_universal.mp4"
+    },
+    vandal: {
+        base: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/fc17448c-4352-a0aa-619a-ed86ee569d4b_default_universal.mp4",
+        variant1: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/fc17448c-4352-a0aa-619a-ed86ee569d4b_default_universal.mp4",
+        variant2: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/fc17448c-4352-a0aa-619a-ed86ee569d4b_default_universal.mp4",
+        variant3: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/fc17448c-4352-a0aa-619a-ed86ee569d4b_default_universal.mp4"
+    },
+    odin: {
+        base: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/faca3515-4365-003c-1355-679be0606088_default_universal.mp4",
+        variant1: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/faca3515-4365-003c-1355-679be0606088_default_universal.mp4",
+        variant2: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/faca3515-4365-003c-1355-679be0606088_default_universal.mp4",
+        variant3: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/faca3515-4365-003c-1355-679be0606088_default_universal.mp4"
+    },
+    knife: {
+        base: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/bbd2113e-4c6a-4620-b62f-0f937aeb059a_default_universal.mp4",
+        variant1: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/bbd2113e-4c6a-4620-b62f-0f937aeb059a_default_universal.mp4",
+        variant2: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/bbd2113e-4c6a-4620-b62f-0f937aeb059a_default_universal.mp4",
+        variant3: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/bbd2113e-4c6a-4620-b62f-0f937aeb059a_default_universal.mp4"
+    }
+};
+
+const protocolVideo = {
+    sheriff: {
+        base: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/3a4f7fb8-47f5-3a75-220b-ed9281251a21_default_universal.mp4",
+        variant1: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/3a4f7fb8-47f5-3a75-220b-ed9281251a21_default_universal.mp4",
+        variant2: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/3a4f7fb8-47f5-3a75-220b-ed9281251a21_default_universal.mp4",
+        variant3: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/3a4f7fb8-47f5-3a75-220b-ed9281251a21_default_universal.mp4"
+    },
+    spectre: {
+        base: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/626c69ea-4d80-aa02-9573-06885eb07f4c_default_universal.mp4",
+        variant1: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/626c69ea-4d80-aa02-9573-06885eb07f4c_default_universal.mp4",
+        variant2: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/626c69ea-4d80-aa02-9573-06885eb07f4c_default_universal.mp4",
+        variant3: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/626c69ea-4d80-aa02-9573-06885eb07f4c_default_universal.mp4"
+    },
+    bulldog: {
+        base: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/e2b30f2f-4512-275a-b25c-6f92e40c2dc3_default_universal.mp4",
+        variant1: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/e2b30f2f-4512-275a-b25c-6f92e40c2dc3_default_universal.mp4",
+        variant2: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/e2b30f2f-4512-275a-b25c-6f92e40c2dc3_default_universal.mp4",
+        variant3: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/e2b30f2f-4512-275a-b25c-6f92e40c2dc3_default_universal.mp4"
+    },
+    phantom: {
+        base: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/607336dc-48ba-cc56-a012-f3b41b393db0_default_universal.mp4",
+        variant1: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/607336dc-48ba-cc56-a012-f3b41b393db0_default_universal.mp4",
+        variant2: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/607336dc-48ba-cc56-a012-f3b41b393db0_default_universal.mp4",
+        variant3: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/607336dc-48ba-cc56-a012-f3b41b393db0_default_universal.mp4"
+    },
+    knife: {
+        base: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/332ef0f9-4197-708f-0415-fd8a0922cc7a_default_universal.mp4",
+        variant1: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/332ef0f9-4197-708f-0415-fd8a0922cc7a_default_universal.mp4",
+        variant2: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/332ef0f9-4197-708f-0415-fd8a0922cc7a_default_universal.mp4",
+        variant3: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/332ef0f9-4197-708f-0415-fd8a0922cc7a_default_universal.mp4"
+    }
+};
+const enderFlameVideo = {
+    frenzy: {
+        base: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/bc78c474-4ce3-4cb6-a887-8d3da7694780_default_universal.mp4",
+        variant1: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/bc78c474-4ce3-4cb6-a887-8d3da7694780_default_universal.mp4",
+        variant2: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/bc78c474-4ce3-4cb6-a887-8d3da7694780_default_universal.mp4",
+        variant3: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/bc78c474-4ce3-4cb6-a887-8d3da7694780_default_universal.mp4"
+    },
+    judge: {
+        base: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/51da2dd8-00cb-43d2-b13b-b55ab4646d29_default_universal.mp4",
+        variant1: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/51da2dd8-00cb-43d2-b13b-b55ab4646d29_default_universal.mp4",
+        variant2: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/51da2dd8-00cb-43d2-b13b-b55ab4646d29_default_universal.mp4",
+        variant3: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/51da2dd8-00cb-43d2-b13b-b55ab4646d29_default_universal.mp4"
+    },
+    vandal: {
+        base: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/71127731-9ce5-4f7a-b9ae-dc55dfe7d9b4_default_universal.mp4",
+        variant1: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/71127731-9ce5-4f7a-b9ae-dc55dfe7d9b4_default_universal.mp4",
+        variant2: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/71127731-9ce5-4f7a-b9ae-dc55dfe7d9b4_default_universal.mp4",
+        variant3: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/71127731-9ce5-4f7a-b9ae-dc55dfe7d9b4_default_universal.mp4"
+    },
+    operator: {
+        base: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/9662e509-fba3-409d-b4c4-87b0c7279792_default_universal.mp4",
+        variant1: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/9662e509-fba3-409d-b4c4-87b0c7279792_default_universal.mp4",
+        variant2: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/9662e509-fba3-409d-b4c4-87b0c7279792_default_universal.mp4",
+        variant3: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/9662e509-fba3-409d-b4c4-87b0c7279792_default_universal.mp4"
+    },
+    knife: {
+        base: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/97510dc2-457c-4b55-8737-14646b3e05e9_default_universal.mp4",
+    }
+};
 // Dades automàtiques de cada pack (afegeix més aquí si vols)
 const packsData = {
     Arcane: generatePackData("Arcane", Object.keys(arcaneImg), 0, arcaneVideos, arcaneImg),
     Divergence: generatePackData("Divergence", Object.keys(divergenceImg), 3, divergenceVideos, divergenceImg),
     Kuronami: generatePackData("Kuronami", Object.keys(kuronamiImg), 3, kuronamiVideos, kuronamiImg),
     Glitchpop: generatePackData("Glitchpop", Object.keys(glitchpopImg), 3, glitchpopVideos, glitchpopImg),
+    RES: generatePackData("RES", Object.keys(resImg), 2, resVideo, resImg),
+    Evori: generatePackData("Evori", Object.keys(evoriImg), 3, evoriVideo, evoriImg),
+    Protocol: generatePackData("Protocol", Object.keys(protocolImg), 3, protocolVideo, protocolImg),
+    EnderFlame: generatePackData("EnderFlame", Object.keys(enderFlameImg), 3, enderFlameVideo, enderFlameImg),
     // Afegeix més packs aquí si cal
 };
 
@@ -347,7 +591,6 @@ function showVariants(variants) {
     });
 }
 
-
 function showWeaponPreview(videoUrl) {
     const preview = document.getElementById('weaponPreview');
     preview.innerHTML = `
@@ -384,7 +627,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const img = document.createElement('img');
         img.className = 'demo w3-opacity w3-hover-opacity-off';
-        img.src = `../SkinsContent/${packName}/${packName}.png`;
+        img.src = `../SkinsContent/${packName}.png`;
         img.onclick = () => currentDiv(index + 1); // només si uses la funció de slides
         container.appendChild(img);
 
