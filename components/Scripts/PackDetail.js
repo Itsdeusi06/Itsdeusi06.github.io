@@ -538,7 +538,7 @@ const packsData = {
     RES: generatePackData("RES", Object.keys(resImg), 2, resVideo, resImg),
     Evori: generatePackData("Evori", Object.keys(evoriImg), 3, evoriVideo, evoriImg),
     Protocol: generatePackData("Protocol", Object.keys(protocolImg), 3, protocolVideo, protocolImg),
-    EnderFlame: generatePackData("EnderFlame", Object.keys(enderFlameImg), 3, enderFlameVideo, enderFlameImg),
+    Enderflame: generatePackData("Enderflame", Object.keys(enderFlameImg), 3, enderFlameVideo, enderFlameImg),
     // Afegeix més packs aquí si cal
 };
 
