@@ -502,31 +502,31 @@ const protocolVideo = {
 };
 const enderFlameVideo = {
     frenzy: {
-        base: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/83783875-f20d-499e-add9-bee9cb81f01e_default_universal.mp4",
-        variant1: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/83783875-f20d-499e-add9-bee9cb81f01e_default_universal.mp4",
-        variant2: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/83783875-f20d-499e-add9-bee9cb81f01e_default_universal.mp4",
-        variant3: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/83783875-f20d-499e-add9-bee9cb81f01e_default_universal.mp4"
+        base: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/bc78c474-4ce3-4cb6-a887-8d3da7694780_default_universal.mp4",
+        variant1: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/bc78c474-4ce3-4cb6-a887-8d3da7694780_default_universal.mp4",
+        variant2: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/bc78c474-4ce3-4cb6-a887-8d3da7694780_default_universal.mp4",
+        variant3: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/bc78c474-4ce3-4cb6-a887-8d3da7694780_default_universal.mp4"
     },
     judge: {
-        base: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/9bc9589a-a2c4-43f4-a29a-8d1d6b09a763_default_universal.mp4",
-        variant1: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/9bc9589a-a2c4-43f4-a29a-8d1d6b09a763_default_universal.mp4",
-        variant2: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/9bc9589a-a2c4-43f4-a29a-8d1d6b09a763_default_universal.mp4",
-        variant3: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/9bc9589a-a2c4-43f4-a29a-8d1d6b09a763_default_universal.mp4"
+        base: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/51da2dd8-00cb-43d2-b13b-b55ab4646d29_default_universal.mp4",
+        variant1: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/51da2dd8-00cb-43d2-b13b-b55ab4646d29_default_universal.mp4",
+        variant2: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/51da2dd8-00cb-43d2-b13b-b55ab4646d29_default_universal.mp4",
+        variant3: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/51da2dd8-00cb-43d2-b13b-b55ab4646d29_default_universal.mp4"
     },
     vandal: {
-        base: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/7cf0f6c2-af1e-47db-9d85-f1a130267cc7_default_universal.mp4",
-        variant1: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/7cf0f6c2-af1e-47db-9d85-f1a130267cc7_default_universal.mp4",
-        variant2: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/7cf0f6c2-af1e-47db-9d85-f1a130267cc7_default_universal.mp4",
-        variant3: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/7cf0f6c2-af1e-47db-9d85-f1a130267cc7_default_universal.mp4"
+        base: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/71127731-9ce5-4f7a-b9ae-dc55dfe7d9b4_default_universal.mp4",
+        variant1: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/71127731-9ce5-4f7a-b9ae-dc55dfe7d9b4_default_universal.mp4",
+        variant2: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/71127731-9ce5-4f7a-b9ae-dc55dfe7d9b4_default_universal.mp4",
+        variant3: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/71127731-9ce5-4f7a-b9ae-dc55dfe7d9b4_default_universal.mp4"
     },
     operator: {
-        base: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/0e1f79a5-81ae-4d21-b3c5-740605b7e054_default_universal.mp4",
-        variant1: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/0e1f79a5-81ae-4d21-b3c5-740605b7e054_default_universal.mp4",
-        variant2: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/0e1f79a5-81ae-4d21-b3c5-740605b7e054_default_universal.mp4",
-        variant3: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/0e1f79a5-81ae-4d21-b3c5-740605b7e054_default_universal.mp4"
+        base: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/9662e509-fba3-409d-b4c4-87b0c7279792_default_universal.mp4",
+        variant1: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/9662e509-fba3-409d-b4c4-87b0c7279792_default_universal.mp4",
+        variant2: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/9662e509-fba3-409d-b4c4-87b0c7279792_default_universal.mp4",
+        variant3: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/9662e509-fba3-409d-b4c4-87b0c7279792_default_universal.mp4"
     },
     knife: {
-        base: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/282c7f4a-bc4f-424a-a40d-b87ac5210ba9_default_universal.mp4",
+        base: "https://valorant.dyn.riotcdn.net/x/videos/release-10.09/97510dc2-457c-4b55-8737-14646b3e05e9_default_universal.mp4",
     }
 };
 // Dades automàtiques de cada pack (afegeix més aquí si vols)
