@@ -116,37 +116,43 @@ body {
 }
 
 /* === RESPONSIVE === */
-@media (max-width: 240px) {
-  .agent-grid {
-    grid-template-columns: repeat(1, 100px);
-  }
+@media (max-width: 2500px) {
   .info-panel {
-    font-size: 3rem;
+    width: 500%;
+  }
+  .agent-grid {
+    grid-template-columns: repeat(4, 100px);
   }
 }
-
-@media (max-width: 768px) {
+@media (min-width: 1024px) and (max-width: 2499px){
+  .info-panel {
+    width: 45%;
+  }
+  .agent-grid {
+    grid-template-columns: repeat(3, 100px);
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
   .info-panel {
     position: static;
     width: 100%;
     margin-top: 20px;
+    font-size: 3rem;
   }
   .agent-grid {
     grid-template-columns: repeat(2, 100px);
   }
 }
 
-@media (min-width: 1024px) {
-  .info-panel {
-    width: 25%;
-  }
+@media (min-width: 240px) and (max-width: 767px) {
   .agent-grid {
-    grid-template-columns: repeat(3, 100px);
+    grid-template-columns: repeat(1, 100px);
+  }
+  p {
+    font-size: 3rem;
   }
 }
 
-@media (min-width: 1474px) {
-  .agent-grid {
-    grid-template-columns: repeat(4, 100px);
-  }
-}
+
+
+
