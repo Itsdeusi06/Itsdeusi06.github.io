@@ -1,3 +1,220 @@
+* { 
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box; 
+}
+
+html, body { 
+  width: 100%; 
+  height: 100%; 
+  overflow-x: hidden; 
+  color: #fff; 
+  font-family: sans-serif; 
+}
+
+/* This is where background color starts and is animated later */
+body {
+  background-color: rgb(255, 70, 85);
+}
+
+#animation-wrapper {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  pointer-events: none;
+}
+
+#riot-fist {
+  position: absolute;
+  width: 50%;
+  top: 25%;
+  left: 25%;
+}
+
+#text-overlay {
+  position: absolute;
+  width: max-content;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  line-height: 1.2;
+  font-family: 'Orbitron', sans-serif;
+}
+
+#text-overlay span { 
+  display: inline-block; 
+  opacity: 0; 
+}
+
+#final-text {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.2rem;
+  max-width: 90vw;
+  width: max-content;
+  text-align: center;
+  line-height: 1.4;
+  opacity: 0;
+}
+
+#content {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* centra verticalmente */
+  align-items: center;     /* centra horizontalmente */
+  top: 10%;
+  left: 10%;
+}
+
+.three-panel-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 90%;
+  gap: 2rem;
+  padding: 0 1rem;
+  margin-bottom: 5%;
+}
+
+.panel-row {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.panel {
+  flex: 1 1 30%;
+  min-width: 280px;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: background 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+
+.panel:hover {
+  background: rgb(255, 70, 85);
+  box-shadow: 0 4px 24px 0 rgba(0,0,0,0.15);
+}
+
+.main-panel {
+  min-width: 100%;
+  max-width: 100%;
+  flex: none;
+}
+
+@media screen and (min-width: 2486px) { /* BIG SCREENS */
+  #text-overlay {
+    font-size: 5rem;
+  }
+
+  .three-panel-layout {
+    gap: 50px;
+    margin-bottom: 10%;
+  }
+
+  .panel {
+    font-size: 3rem;
+  }
+  
+  #final-text {
+    font-size: 3rem;
+   }
+}
+@media screen and (min-width: 1440px) and (max-width: 1999px) { /* NORMAL SCREENS */
+  #text-overlay {
+    font-size: 3rem;
+  }
+
+  .three-panel-layout {
+    gap: 75px;
+    margin-bottom: 15%;
+  }
+
+  .panel {
+    font-size: 2.5rem;
+  }
+  
+  #final-text {
+    font-size: 2.5rem;
+   }
+}
+@media screen and (min-width: 1000px) and (max-width: 1439px) { /* SMALL SCREENS */
+  #text-overlay {
+    font-size: 2.5rem;
+  }
+
+  .three-panel-layout {
+    gap: 100px;
+    margin-bottom: 20%;
+  }
+
+  .panel {
+    font-size: 2rem;
+  }
+  
+  #final-text {
+    font-size: 2rem;
+   }
+}
+@media screen and (min-width: 760px) and (max-width: 999px) { /* TABLETS SCREENS */
+  #text-overlay {
+    font-size: 2.25rem;
+  }
+
+  .three-panel-layout {
+    gap: 125px;
+    margin-bottom: 23%;
+  }
+
+  .panel {
+    font-size: 1.75rem;
+  }
+  
+  #final-text {
+    font-size: 1.75rem;
+   }
+}
+@media screen and (min-width: 0px) and (max-width: 759px) { /* MOBILE SCREENS (animation doesn't working properly) */
+  #text-overlay {
+    font-size: 2rem;
+  }
+
+  .three-panel-layout {
+    gap: 150px;
+    margin-bottom: 25%;
+  }
+
+  .panel {
+    font-size: 1.50rem;
+  }
+  
+  #final-text {
+    font-size: 1.50rem;
+   }
+}
+
 body {
   font-family: 'Orbitron', sans-serif;
 }
