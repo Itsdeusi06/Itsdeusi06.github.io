@@ -1,7 +1,6 @@
 /* === PARTALAX BG === */
 
 body {
-  background-image: url("https://media.valorant-api.com/agents/41fb69c1-4189-7b37-f117-bcaf1e96f1bf/fullportrait.png");
   background-size: fill;
   background-repeat: no-repeat;
   background-position: center;
@@ -74,12 +73,11 @@ body {
   display: flex;
   justify-content: space-around;
   margin-top: 20px;
-  gap: 12px;
 }
 
 .ability-btn {
-  width: 64px;
-  height: 64px;
+  width: 70px;
+  height: 70px;
   background: linear-gradient(135deg, #0f0f1a, #1e1e2f);
   border: 2px solid #333;
   border-radius: 10px;
@@ -116,43 +114,54 @@ body {
 }
 
 /* === RESPONSIVE === */
-@media (max-width: 2500px) {
+@media (max-width: 699px) {
   .info-panel {
-    width: 500%;
+    width: 100%;
+    font-size: 2.5rem;
+  }
+  .agent-grid {
+    grid-template-columns: repeat(1, 100px);
+  }
+  .ability-btn {
+    width: 128px;
+    height: 128px;
+  }
+}
+
+@media (min-width: 700px) and (max-width: 1099px) {
+  .info-panel {
+    width: 100%;
+    font-size: 2rem;
+  }
+  .agent-grid {
+    grid-template-columns: repeat(2, 100px);
+  }
+  .ability-btn {
+    width: 107px;
+    height: 107px;
+  }
+}
+
+@media (min-width: 1100px) and (max-width: 1550px){
+  .info-panel {
+    width: 45%;
+    font-size: 1.5rem;
+  }
+  .agent-grid {
+    grid-template-columns: repeat(3, 100px);
+  }
+  .ability-btn {
+    width: 85px;
+    height: 85px;
+  }
+}
+
+@media (min-width: 1551px) {
+  .info-panel {
+    width: 25%;
+    font-size: 1.5rem;
   }
   .agent-grid {
     grid-template-columns: repeat(4, 100px);
   }
 }
-@media (min-width: 1024px) and (max-width: 2499px){
-  .info-panel {
-    width: 45%;
-  }
-  .agent-grid {
-    grid-template-columns: repeat(3, 100px);
-  }
-}
-@media (min-width: 768px) and (max-width: 1023px) {
-  .info-panel {
-    position: static;
-    width: 100%;
-    margin-top: 20px;
-    font-size: 3rem;
-  }
-  .agent-grid {
-    grid-template-columns: repeat(2, 100px);
-  }
-}
-
-@media (min-width: 240px) and (max-width: 767px) {
-  .agent-grid {
-    grid-template-columns: repeat(1, 100px);
-  }
-  p {
-    font-size: 3rem;
-  }
-}
-
-
-
-
