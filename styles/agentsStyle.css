@@ -1,7 +1,16 @@
+/* === PARTALAX BG === */
+
+body {
+  background-image: url("https://media.valorant-api.com/agents/41fb69c1-4189-7b37-f117-bcaf1e96f1bf/fullportrait.png");
+  background-size: fill;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 /* === AGENT GRID === */
 .agent-grid {
   display: grid;
-  grid-template-columns: repeat(4, 400px);
+
   row-gap: 16px;
   column-gap: 60px;
   justify-content: left;
@@ -46,43 +55,11 @@
   background: rgba(10, 10, 20, 0.8);
   backdrop-filter: blur(10px);
   border-radius: 16px;
-  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-size: 1.5rem;
   color: #fff;
   box-shadow: 0 0 20px rgba(0,0,0,0.6);
 }
 
-/* === RESPONSIVE === */
-@media (max-width: 480px) {
-  .agent-grid {
-    grid-template-columns: repeat(1, 100px);
-  }
-}
-
-@media (max-width: 768px) {
-  .info-panel {
-    position: static;
-    width: 100%;
-    margin-top: 20px;
-  }
-  .agent-grid {
-    grid-template-columns: repeat(2, 100px);
-  }
-}
-
-@media (min-width: 1024px) {
-  .info-panel {
-    width: 25%;
-  }
-  .agent-grid {
-    grid-template-columns: repeat(3, 100px);
-  }
-}
-
-@media (min-width: 2048px) {
-  .agent-grid {
-    grid-template-columns: repeat(4, 100px);
-  }
-}
 
 /* === TEXT === */
 .info-panel h2 {
@@ -138,5 +115,38 @@
   box-shadow: 0 0 12px rgba(0,0,0,0.7);
 }
 
+/* === RESPONSIVE === */
+@media (max-width: 240px) {
+  .agent-grid {
+    grid-template-columns: repeat(1, 100px);
+  }
+  .info-panel {
+    font-size: 3rem;
+  }
+}
 
+@media (max-width: 768px) {
+  .info-panel {
+    position: static;
+    width: 100%;
+    margin-top: 20px;
+  }
+  .agent-grid {
+    grid-template-columns: repeat(2, 100px);
+  }
+}
 
+@media (min-width: 1024px) {
+  .info-panel {
+    width: 25%;
+  }
+  .agent-grid {
+    grid-template-columns: repeat(3, 100px);
+  }
+}
+
+@media (min-width: 1474px) {
+  .agent-grid {
+    grid-template-columns: repeat(4, 100px);
+  }
+}
