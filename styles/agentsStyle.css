@@ -1,119 +1,4 @@
-/* Table agents */
-.agent-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 89px);
-  gap: 10px;
-  height: 100px;
-}
-.agent {
-  text-align: center;
-  cursor: pointer;
-  border: 2px solid transparent;
-  transition: border-color 0.2s;
-}
-.agent img {
-  width: 80px;
-  height: 80px;
-}
-.agent:hover {
-  border-color: cyan;
-}
-
-.info-panel {
-  position: absolute;
-  top: 100px;
-  right: 0;
-  padding: 30px;
-  width: 90%;
-  max-width: 500px;
-  font-size: clamp(1rem, 2vw, 1.4rem);
-  box-sizing: border-box;
-  
-}
-
-@media (max-width: 480px) {
-  .agent-grid {
-    grid-template-columns: repeat(1, 89px);
-  }
-}
-
-@media (max-width: 768px) {
-  .info-panel {
-    position: static;
-    width: 100%;
-    margin-top: 20px;
-  }
-  .agent-grid {
-    grid-template-columns: repeat(2, 89px);
-  }
-}
-
-@media (min-width: 1024px) {
-  .info-panel {
-    width: 400px;
-  }
-  .agent-grid {
-    grid-template-columns: repeat(3, 89px);
-  }
-}
-
-@media (min-width: 2048px) {
-  .agent-grid {
-    grid-template-columns: repeat(4, 89px);
-  }
-}
-
-.info-panel h2 {
-  margin-top: 0;
-  color: #e2dc87;
-}
-
-.abilities {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 20px;
-  gap: 10px;
-}
-
-.ability-btn {
-  width: 60px;
-  height: 60px;
-  background-color: transparent;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  background-color: black;
-}
-
-.ability-btn:hover {
-  border-color: #e2dc87;
-}
-
-.ability-btn img:hover {
-  transform: scale(1.1);
-}
-
-.ability-btn img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  border-radius: 8px;
-  transition: transform 0.2s;
-}
-
-#videoContainer video {
-  margin-top: 20px;
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-
-/*
-
-Estil nous pero no actualitzar encara
-
-/* === AGENT GRID === 
+/* === AGENT GRID === */
 .agent-grid {
   display: grid;
   grid-template-columns: repeat(4, 400px);
@@ -149,7 +34,7 @@ Estil nous pero no actualitzar encara
   box-shadow: 0 0 15px #00fff7;
 }
 
-/* === INFO PANEL === 
+/* === INFO PANEL === */
 .info-panel {
   position: absolute;
   top: 100px;
@@ -166,7 +51,7 @@ Estil nous pero no actualitzar encara
   box-shadow: 0 0 20px rgba(0,0,0,0.6);
 }
 
-/* === RESPONSIVE === 
+/* === RESPONSIVE === */
 @media (max-width: 480px) {
   .agent-grid {
     grid-template-columns: repeat(1, 100px);
@@ -199,7 +84,7 @@ Estil nous pero no actualitzar encara
   }
 }
 
-/* === TEXT === 
+/* === TEXT === */
 .info-panel h2 {
   margin-top: 0;
   font-weight: 700;
@@ -207,7 +92,7 @@ Estil nous pero no actualitzar encara
   text-transform: uppercase;
 }
 
-/* === ABILITIES === 
+/* === ABILITIES === */
 .abilities {
   display: flex;
   justify-content: space-around;
@@ -243,7 +128,7 @@ Estil nous pero no actualitzar encara
   transform: scale(1.1);
 }
 
-/* === VIDEO CONTAINER === 
+/* === VIDEO CONTAINER === */
 #videoContainer video {
   margin-top: 20px;
   width: 100%;
@@ -255,4 +140,3 @@ Estil nous pero no actualitzar encara
 
 
 
-*/
