@@ -4,14 +4,41 @@
     <meta charset="UTF-8">
     <title>ValoWiki</title>
     <link rel="stylesheet" href="/ValoWiki/styles/style.css">
+    <link rel="stylesheet" href="../styles/agentsStyle.css">
+    <link rel="stylesheet" href="../components/Scrips/agentsScript.js">
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@graph": [
+            {
+              "@type": "Person",
+              "name": "Brimstone",
+              "url": "https://itsdeusi06.github.io/ValoWiki/agents/brimstone",
+              "description": "A tactical commander with powerful smokes.",
+              "image": "https://itsdeusi06.github.io/ValoWiki/AgentsContent/Controller/Brimstone/PFP.webp",
+              "characterClass": "Controller",
+              "sameAs": "https://playvalorant.com/en-us/agents/brimstone/"
+            },
+            {
+              "@type": "Person",
+              "name": "Viper",
+              "url": "https://itsdeusi06.github.io/ValoWiki/agents/viper",
+              "description": "A deadly chemist wielding poisonous gas.",
+              "image": "https://itsdeusi06.github.io/ValoWiki/AgentsContent/Controller/Viper/PFP.webp",
+              "characterClass": "Controller",
+              "sameAs": "https://playvalorant.com/en-us/agents/viper/"
+            }
+            ]
+        }
+    </script>
+    <script src="../components/Scrips/agentsScript.js"></script>
 </head>
 <body>
     <header>
-        <h1>Welcome to ValoWiki</h1>
         <!-- Include the NavBar -->
         <div id="navbar"></div>
         <script>
-            fetch('/ValoWiki/components/NavBar.html')
+            fetch('../components/NavBar.html')
                 .then(response => response.text())
                 .then(data => {
                     document.getElementById('navbar').innerHTML = data;
@@ -20,12 +47,96 @@
     </header>
 
     <div id="agents">
-        <h2>Agents</h2>
-        <p>Here there are all the agents of the game with a style of character select like the game.</p>
-    </div>
 
-    <footer>
-        <p>&copy; 2025 ValoWiki. Todos los derechos reservados.</p>
-    </footer>
+        <div class="agent-grid">
+            <button class="agent" onclick="showInfo('JETT')">
+                <img src="../AgentsContent/Duelist/Jett/PFP.webp" alt="JETT">
+            </button>
+            <button class="agent" onclick="showInfo('SOVA')">
+                <img src="../AgentsContent/Iniciator/Sova/PFP.webp" alt="SOVA">
+            </button>
+            <button class="agent" onclick="showInfo('SAGE')">
+                <img src="../AgentsContent/Sentinel/Sage/PFP.webp" alt="SAGE">
+            </button>
+            <button class="agent" onclick="showInfo('BRIMSTONE')">
+                <img src="../AgentsContent/Controller/Brimstone/PFP.webp" alt="BRIMSTONE">
+            </button>
+            <button class="agent" onclick="showInfo('RAZE')">
+                <img src="../AgentsContent/Duelist/Raze/PFP.webp" alt="RAZE">
+            </button>
+            <button class="agent" onclick="showInfo('TEJO')">
+                <img src="../AgentsContent/Iniciator/Tejo/PFP.webp" alt="TEJO">
+            </button>
+            <button class="agent" onclick="showInfo('CHAMBER')">
+                <img src="../AgentsContent/Sentinel/Chamber/PFP.webp" alt="CHAMBER">
+            </button>
+            <button class="agent" onclick="showInfo('ASTRA')">
+                <img src="../AgentsContent/Controller/Astra/PFP.webp" alt="ASTRA">
+            </button>
+            <button class="agent" onclick="showInfo('OMEN')">
+                <img src="../AgentsContent/Controller/Omen/PFP.webp" alt="OMEN">
+            </button>
+            <button class="agent" onclick="showInfo('KAY/O')">
+                <img src="../AgentsContent/Iniciator/Kayo/PFP.webp" alt="KAY/O">
+            </button>
+            <button class="agent" onclick="showInfo('VYSE')">
+                <img src="../AgentsContent/Sentinel/Vyse/PFP.webp" alt="VYSE">
+            </button>
+            <button class="agent" onclick="showInfo('CLOVE')">
+                <img src="../AgentsContent/Controller/Clove/PFP.webp" alt="CLOVE">
+            </button>
+            <button class="agent" onclick="showInfo('ISO')">
+                <img src="../AgentsContent/Duelist/Iso/PFP.webp" alt="ISO">
+            </button>
+            <button class="agent" onclick="showInfo('BREACH')">
+                <img src="../AgentsContent/Iniciator/Breach/PFP.webp" alt="BREACH">
+            </button>
+            <button class="agent" onclick="showInfo('CYPHER')">
+                <img src="../AgentsContent/Sentinel/Cypher/PFP.webp" alt="CYPHER">
+            </button>
+            <button class="agent" onclick="showInfo('HARBOR')">
+                <img src="../AgentsContent/Controller/Harbor/PFP.webp" alt="HARBOR">
+            </button>
+            <button class="agent" onclick="showInfo('NEON')">
+                <img src="../AgentsContent/Duelist/Neon/PFP.webp" alt="NEON">
+            </button>
+            <button class="agent" onclick="showInfo('FADE')">
+                <img src="../AgentsContent/Iniciator/Fade/PFP.webp" alt="FADE">
+            </button>
+            <button class="agent" onclick="showInfo('DEADLOCK')">
+                <img src="../AgentsContent/Sentinel/Deadlock/PFP.webp" alt="DEADLOCK">
+            </button>
+            <button class="agent" onclick="showInfo('VIPER')">
+                <img src="../AgentsContent/Controller/Viper/PFP.webp" alt="VIPER">
+            </button>
+            <button class="agent" onclick="showInfo('PHOENIX')">
+                <img src="../AgentsContent/Duelist/Phoenix/PFP.webp" alt="PHOENIX">
+            </button>
+            <button class="agent" onclick="showInfo('GEKKO')">
+                <img src="../AgentsContent/Iniciator/Gekko/PFP.webp" alt="GEKKO">
+            </button>
+            <button class="agent" onclick="showInfo('KILLJOY')">
+                <img src="../AgentsContent/Sentinel/Killjoy/PFP.webp" alt="KILLJOY">
+            </button>
+            <button class="agent" onclick="showInfo('REYNA')">
+                <img src="../AgentsContent/Duelist/Reyna/PFP.webp" alt="REYNA">
+            </button>
+            <button class="agent" onclick="showInfo('WAYLAY')">
+                <img src="../AgentsContent/Duelist/Waylay/PFP.webp" alt="WAYLAY">
+            </button>
+            <button class="agent" onclick="showInfo('SKYE')">
+                <img src="../AgentsContent/Iniciator/Skye/PFP.webp" alt="SKYE">
+            </button>
+            <button class="agent" onclick="showInfo('YORU')">
+                <img src="../AgentsContent/Duelist/Yoru/PFP.webp" alt="YORU">
+            </button>
+        </div>
+
+        <div class="info-panel" id="infoPanel">
+            <h2>Select an Agent</h2>
+            <p>Click on an agent to see their details.</p>
+        </div>
+
+    </div>
 </body>
 </html>
