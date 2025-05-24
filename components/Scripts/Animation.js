@@ -17,24 +17,35 @@ window.addEventListener('DOMContentLoaded', () => {
     scale = 0.6;
     top = 50;
     left = 25; 
-  } else if (window.matchMedia('(min-width: 1440px) and (max-width: 1999px)').matches) {
+  } else if (window.matchMedia('(min-width: 1700px) and (max-width: 1999px)').matches) {
     xPercent = -60;
+    top	 = 5;
+    scale =0.7;
+  } else if (window.matchMedia('(min-width: 1440px) and (max-width: 1699px)').matches) {
+    xPercent = -60;
+    top = 5;
     scale = 0.7;
   } else if (window.matchMedia('(min-width: 1000px) and (max-width: 1439px)').matches) {
     xPercent = 0;
-    yPercent = -20;
+    yPercent = -30;
     scale = 0.8;
-  } else if (window.matchMedia('(min-width: 760px) and (max-width: 999px)')) {
+  } else if (window.matchMedia('(min-width: 760px) and (max-width: 999px)').matches) {
     xPercent = 0;
-    yPercent = -20;
+    yPercent = -40;
     top = 30;
     left = 25;
-  } else if (window.matchMedia('(min-width: 0px) and (max-width: 759px)')) {
+  } else if (window.matchMedia('(min-width: 380px) and (max-width: 759px)').matches) {
     xPercent = 0;
-    yPercent = -0;
-    scale = 0.8
+    yPercent = -60;
+    scale = 2
     top = 50;
-    left = 0;
+    left = 50;
+  } else if (window.matchMedia('(min-width: 0px) and (max-width: 379px)').matches) {
+    xPercent = 0;
+    yPercent = -60;
+    scale = 2
+    top = 40;
+    left = 40;
   }
 
   // Set HTML base font size for rem scaling
