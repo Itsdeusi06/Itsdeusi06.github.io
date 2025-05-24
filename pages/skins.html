@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ValoWiki - Skins</title>
+    <link rel="stylesheet" href="/ValoWiki/styles/style.css">
+    <link rel="stylesheet" href="../styles/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+
+
+
+    <script defer src="/ValoWiki/components/Scripts/SkinsNavbar.js"></script>
+    <script defer src="../components/Scripts/SkinsNavbar.js"></script>
+    <script defer src="/ValoWiki/components/Scripts/busqueda.js"></script>
+    <script defer src="../components/Scripts/busqueda.js"></script>
+    <script defer src="../components/Scripts/PackDetail.js"></script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProductCollection",
+        "name": "Arcane Skins",
+        "description": "A collection of skins inspired by the Arcane series.",
+        "url": "https://itsdeusi06.github.io/ValoWiki/pages/skins.html",
+        "image": "https://itsdeusi06.github.io/ValoWiki/SkinsContent/Arcane/Arcane.png",
+        "hasPart": [
+            {
+                "@type": "Product",
+                "name": "Melee: Arcane Gauntlets",
+                "image": "https://itsdeusi06.github.io/ValoWiki/SkinsContent/Arcane/knife.png",
+                "description": "A pair of gauntlets inspired by the Arcane series.",
+                "brand": {
+                    "@type": "Brand",
+                    "name": "Valorant Skins"
+                },
+                "offers": {
+                    "@type": "Offer",
+                    "priceCurrency": "VP",
+                    "price": "4350"
+                }
+            },
+            {
+                "@type": "Product",
+                "name": "Vandal: Arcane",
+                "image": "https://itsdeusi06.github.io/ValoWiki/SkinsContent/Arcane/Vandal.png",
+                "description": "A Vandal skin inspired by the Arcane series.",
+                "brand": {
+                    "@type": "Brand",
+                    "name": "Valorant Skins"
+                },
+                "offers": {
+                    "@type": "Offer",
+                    "priceCurrency": "VP",
+                    "price": "2175"
+                }
+            }
+        ]
+    }
+    </script>
+</head>
+
+<body id="skins">
+    <header>
+        <!-- Include the NavBar -->
+        <div id="navbar"></div>
+        <script>
+            fetch('../components/NavBar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('navbar').innerHTML = data;
+                });
+        </script>
+    </header>
+
+    <div class="w3-content">
+
+        <div class="search-container">
+            <input type="text" id="skinSearch" onkeyup="filterSkins()" placeholder="Buscar pack de skins...">
+        </div>
+          
+        <div class="thumbnail-row" id="thumbnailRow"></div>
+
+                <!-- Zona de detalle del pack seleccionado -->
+        <div id="packDetail" class="pack-detail">
+            <h2 id="packTitle">Arcane</h2>
+            <!-- Variantes debajo del título -->
+            <div class="variant-gallery" id="variantGallery"></div>
+
+            <div class="pack-columns">
+                <!-- Armas a la izquierda -->
+                <div class="weapons-column">
+                    <div class="weapons-gallery" id="weaponsGallery"></div>
+                </div>
+
+                <!-- Preview al centro -->
+                <div class="central-column">
+                    <div id="weaponPreview" class="weapon-preview">
+                        <p>Selecciona una variante para ver el video o imagen</p>
+                    </div>
+                </div>
+
+                <!-- Info del arma a la derecha -->
+                <div class="weapon-info">
+                    <h3 id="weaponInfoTitle">Información del arma</h3>
+                    <div id="weaponInfoDetails">Precio, tipo, rareza, etc...</div>
+                </div>
+            </div>
+    </div>
+
+    <footer>
+        <p>ValoWiki was created under Riot Games' "Legal Jibber Jabber" policy using assets owned by Riot Games. Riot Games does not endorse or sponsor this project.</p>
+    </footer>
+</body>
+
+</html>

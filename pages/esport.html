@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VCT Matches - Masters Toronto 2025</title>
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body class="esport-page">
+    <div id="navbar"></div>
+
+    <header class="header">
+
+        <h1 class="title">Valorant Champions Tour 2025: Masters Toronto</h1>
+    </header>
+
+    <main>
+        <div class="content-wrapper">
+            <!-- Left Half: Teams with logos and players -->
+            <div class="team-list">
+                <h2>Teams</h2>
+
+                <!-- Team List will be dynamically populated from the players script -->
+                <div id="team-list"></div>
+            </div>
+
+            <!-- Right Half: Match List -->
+            <div class="match-list">
+                <h2>Match Schedule</h2>
+                <!-- Match Cards will be generated dynamically by JavaScript -->
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>ValoWiki was created under Riot Games' "Legal Jibber Jabber" policy using assets owned by Riot Games.  Riot Games does not endorse or sponsor this project.</p>
+    </footer>
+
+    <script>
+        // Explicitly fetch the NavBar.html file from the correct path
+        fetch('../components/NavBar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error loading NavBar:', error);
+            });
+    </script>
+    
+    <!-- Load players.js first -->
+    <script src="../components/scripts/players.js" defer></script>
+        
+    <!-- Load matches.js after players.js -->
+    <script src="../components/scripts/matches.js" defer></script>
+
+
+</body>
+</html>
