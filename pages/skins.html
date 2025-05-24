@@ -16,48 +16,40 @@
     <script defer src="/ValoWiki/components/Scripts/busqueda.js"></script>
     <script defer src="../components/Scripts/busqueda.js"></script>
     <script defer src="../components/Scripts/PackDetail.js"></script>
-    <script type="application/ld+json">
+   <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Valorant Skins",
+  "url": "https://itsdeusi06.github.io/ValoWiki/pages/skins.html",
+  "description": "Browse all Valorant weapon skins, bundles, and variants.",
+  "mainEntity": [
     {
-        "@context": "https://schema.org",
-        "@type": "ProductCollection",
-        "name": "Arcane Skins",
-        "description": "A collection of skins inspired by the Arcane series.",
-        "url": "https://itsdeusi06.github.io/ValoWiki/pages/skins.html",
-        "image": "https://itsdeusi06.github.io/ValoWiki/SkinsContent/Arcane/Arcane.png",
-        "hasPart": [
-            {
-                "@type": "Product",
-                "name": "Melee: Arcane Gauntlets",
-                "image": "https://itsdeusi06.github.io/ValoWiki/SkinsContent/Arcane/knife.png",
-                "description": "A pair of gauntlets inspired by the Arcane series.",
-                "brand": {
-                    "@type": "Brand",
-                    "name": "Valorant Skins"
-                },
-                "offers": {
-                    "@type": "Offer",
-                    "priceCurrency": "VP",
-                    "price": "4350"
-                }
-            },
-            {
-                "@type": "Product",
-                "name": "Vandal: Arcane",
-                "image": "https://itsdeusi06.github.io/ValoWiki/SkinsContent/Arcane/Vandal.png",
-                "description": "A Vandal skin inspired by the Arcane series.",
-                "brand": {
-                    "@type": "Brand",
-                    "name": "Valorant Skins"
-                },
-                "offers": {
-                    "@type": "Offer",
-                    "priceCurrency": "VP",
-                    "price": "2175"
-                }
-            }
-        ]
-    }
-    </script>
+      "@type": "Product",
+      "name": "Arcane Knife",
+      "image": "https://c-valorant-api.op.gg/Assets/WeaponSkins/CABEE19E-42BC-E04B-7AE5-0EB88802AAF3.png",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "VP",
+        "price": "4350",
+        "availability": "https://schema.org/InStock"
+      }
+    },
+    {
+      "@type": "Product",
+      "name": "Kuronami Vandal",
+      "image": "https://c-valorant-api.op.gg/Assets/WeaponSkins/B8F6A58F-4CE1-14F7-6DA1-B28AD5F23E74.png",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "VP",
+        "price": "2175",
+        "availability": "https://schema.org/InStock"
+      }
+    },
+    // Seguir aqui....
+  ]
+}
+</script>
 </head>
 
 <body id="skins">
